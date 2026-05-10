@@ -199,6 +199,111 @@ table.answers td.num { color: var(--navy); font-weight: 700; width: 22%; }
 </style>
 </head>
 <body>
+
+<!-- ============================================
+     비밀번호 게이트 (수정은 아래 PASSWORD 변수만)
+     ============================================ -->
+<style>
+#pw-gate {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #FAFAF7;
+  display: flex; align-items: center; justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "Noto Sans KR", sans-serif;
+}
+#pw-gate .pw-card {
+  background: white; border: 1px solid #DDDDDD; border-radius: 16px;
+  padding: 48px 40px; max-width: 420px; width: 90%;
+  box-shadow: 0 4px 18px rgba(0,0,0,.05);
+  text-align: center;
+}
+#pw-gate .pw-label {
+  color: #B8860B; font-weight: 700; letter-spacing: .12em;
+  font-size: 12px; margin-bottom: 12px;
+}
+#pw-gate h1 {
+  color: #1F3A5F; font-size: 24px; margin: 0 0 8px;
+  font-weight: 800; letter-spacing: -.01em;
+}
+#pw-gate .pw-sub {
+  color: #4A4A4A; font-size: 14px; margin-bottom: 28px;
+}
+#pw-gate input[type="password"] {
+  width: 100%; padding: 14px 16px; font-size: 16px;
+  border: 1.5px solid #DDDDDD; border-radius: 10px;
+  background: #FAFAF7; color: #222222;
+  outline: none; transition: border-color .15s;
+  font-family: inherit;
+}
+#pw-gate input[type="password"]:focus { border-color: #1F3A5F; }
+#pw-gate button {
+  margin-top: 14px; width: 100%; padding: 14px;
+  background: #1F3A5F; color: white; border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  transition: opacity .15s; font-family: inherit;
+}
+#pw-gate button:hover { opacity: .9; }
+#pw-gate .pw-error {
+  color: #B8860B; font-size: 13px; margin-top: 12px; min-height: 18px;
+  font-weight: 600;
+}
+body.pw-locked { overflow: hidden; }
+body.pw-locked > .container,
+body.pw-locked > section { display: none !important; }
+</style>
+
+<div id="pw-gate">
+  <div class="pw-card">
+    <div class="pw-label">SONG GRE VERBAL</div>
+    <h1>수강생 전용 자료</h1>
+    <p class="pw-sub">비밀번호를 입력해 주세요.</p>
+    <input type="password" id="pw-input" autocomplete="off" autofocus>
+    <button id="pw-submit">확인</button>
+    <div class="pw-error" id="pw-error"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ⬇⬇⬇ 비밀번호는 여기서만 수정하세요 ⬇⬇⬇
+  const PASSWORD = "registersong";
+  // ⬆⬆⬆ 비밀번호는 여기서만 수정하세요 ⬆⬆⬆
+
+  const STORAGE_KEY = "gre_freq30_answers_2026_auth";
+  const gate = document.getElementById("pw-gate");
+  const input = document.getElementById("pw-input");
+  const submit = document.getElementById("pw-submit");
+  const errorEl = document.getElementById("pw-error");
+
+  // 이미 인증된 세션이면 게이트 통과
+  if (sessionStorage.getItem(STORAGE_KEY) === "ok") {
+    gate.remove();
+    document.body.classList.remove("pw-locked");
+    return;
+  }
+  document.body.classList.add("pw-locked");
+
+  function tryUnlock() {
+    if (input.value === PASSWORD) {
+      sessionStorage.setItem(STORAGE_KEY, "ok");
+      gate.remove();
+      document.body.classList.remove("pw-locked");
+    } else {
+      errorEl.textContent = "비밀번호가 올바르지 않습니다.";
+      input.value = "";
+      input.focus();
+    }
+  }
+
+  submit.addEventListener("click", tryUnlock);
+  input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") tryUnlock();
+  });
+})();
+</script>
+<!-- ============================================
+     비밀번호 게이트 끝
+     ============================================ -->
+
 <div class="container">
 
 <section class="cover">
