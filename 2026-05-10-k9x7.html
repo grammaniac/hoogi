@@ -1,0 +1,1078 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRE Verbal 최빈출 30 · 송종옥 GRE Verbal</title>
+<style>
+:root {
+  --navy: #1F3A5F;
+  --gold: #B8860B;
+  --bg: #FAFAF7;
+  --soft-blue: #E8EEF5;
+  --soft-tier2: #F0EAD8;
+  --soft-cream: #F4F1EA;
+  --text: #222222;
+  --gray: #4A4A4A;
+  --border: #DDDDDD;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  line-height: 1.6; font-size: 15px;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 40px 32px 80px; }
+
+/* Cover */
+.cover {
+  background: white; border-radius: 16px; padding: 56px 48px 48px;
+  text-align: center; margin-bottom: 28px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.05); border: 1px solid var(--border);
+}
+.cover .label { color: var(--gold); font-weight: 700; letter-spacing: .12em; font-size: 12px; margin-bottom: 12px; }
+.cover h1 { color: var(--navy); font-size: 48px; margin: 0 0 6px; line-height: 1.1; font-weight: 800; letter-spacing: -.01em; }
+.cover .sub { color: var(--navy); font-size: 20px; font-weight: 700; margin-bottom: 24px; }
+.cover .divider { width: 100%; height: 2px; background: var(--gold); opacity: .5; margin: 22px auto; }
+.cover .desc { color: var(--gray); font-size: 15px; }
+.cover .desc-en { color: var(--gray); font-style: italic; font-size: 13px; margin-bottom: 28px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0 20px; }
+.stat { border-radius: 10px; padding: 22px 12px; }
+.stat.t1 { background: var(--navy); color: white; }
+.stat.t2 { background: var(--soft-tier2); }
+.stat.total { background: var(--soft-cream); }
+.stat .lbl { font-size: 11px; letter-spacing: .15em; font-weight: 700; }
+.stat.t1 .lbl { color: #FFCF6E; }
+.stat.t2 .lbl, .stat.total .lbl { color: var(--gold); }
+.stat .num { font-size: 38px; font-weight: 800; line-height: 1; margin-top: 4px; }
+.stat.t1 .num { color: white; }
+.stat.t2 .num, .stat.total .num { color: var(--navy); }
+.stat .sub { font-size: 11px; margin-top: 4px; }
+.stat.t1 .sub { color: #DDD; }
+.stat.t2 .sub, .stat.total .sub { color: var(--gray); }
+.cover .author { color: var(--navy); font-weight: 700; font-size: 14px; margin-top: 24px; }
+.cover .date { color: var(--gray); font-size: 12px; }
+
+/* Section */
+.section { background: white; border-radius: 14px; padding: 32px 36px; margin-bottom: 22px; border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+.section h2 { color: var(--navy); font-size: 26px; margin: 0 0 4px; font-weight: 800; }
+.section .rule { height: 2px; background: var(--gold); opacity: .35; margin: 8px 0 18px; }
+.intro-quote { font-size: 18px; font-style: italic; color: var(--navy); font-weight: 700; margin: 4px 0 14px; }
+
+.tier-box { padding: 18px 22px; border-radius: 8px; margin: 14px 0; }
+.tier-box.t1 { background: var(--soft-blue); border-left: 6px solid var(--navy); }
+.tier-box.t2 { background: var(--soft-tier2); border-left: 6px solid var(--gold); }
+.tier-box .lbl { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .15em; }
+.tier-box .ttl { color: var(--navy); font-size: 17px; font-weight: 800; margin-top: 2px; }
+.tier-box .desc { font-size: 14px; line-height: 1.55; margin: 6px 0 4px; }
+.tier-box .when { font-size: 13px; }
+.tier-box .when b { color: var(--gray); }
+
+table.index { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 13.5px; }
+table.index th { background: var(--navy); color: white; padding: 9px 12px; text-align: left; font-weight: 700; }
+table.index th.center, table.index td.center { text-align: center; }
+table.index td { padding: 7px 12px; border-bottom: 1px solid var(--border); }
+table.index tr.t1 td { background: var(--soft-cream); }
+table.index tr.t2 td { background: #FAFAF6; }
+table.index td.tier { font-weight: 700; }
+table.index td.tier.t1 { color: var(--gold); }
+table.index td.tier.t2 { color: var(--navy); }
+table.index td.num { color: var(--navy); font-weight: 700; }
+
+/* Tier divider */
+.tier-divider { background: white; border-radius: 14px; padding: 56px 36px; text-align: center; margin: 36px 0 22px; border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+.tier-divider .lbl { color: var(--gold); font-size: 14px; font-weight: 700; letter-spacing: .2em; }
+.tier-divider h1 { color: var(--navy); font-size: 56px; font-weight: 800; margin: 6px 0; }
+.tier-divider .desc { color: var(--gray); font-size: 16px; font-weight: 700; }
+.tier-divider .divider-line { width: 100%; height: 2px; background: var(--gold); opacity: .5; margin: 20px 0; }
+.tier-divider .nums { font-size: 14px; color: var(--navy); font-weight: 700; margin-top: 8px; line-height: 2; }
+
+/* Problem header */
+.problem { background: white; border-radius: 12px; margin-bottom: 22px; border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(0,0,0,.04); overflow: hidden; }
+.problem .head { display: flex; align-items: stretch; }
+.problem .badge { background: var(--navy); color: white; min-width: 130px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 14px; }
+.problem .badge .lbl { font-size: 9.5px; letter-spacing: .15em; color: #FFCF6E; font-weight: 700; }
+.problem .badge .n { font-size: 18px; font-weight: 800; line-height: 1.1; margin-top: 4px; }
+.problem .ttl { background: var(--soft-cream); flex: 1; padding: 14px 22px; display: flex; flex-direction: column; justify-content: center; }
+.problem .ttl h3 { color: var(--navy); font-size: 16px; margin: 0; font-weight: 800; }
+.problem .ttl .meta { color: var(--gray); font-size: 12px; margin-top: 3px; }
+.problem .ttl .freq { color: var(--gold); font-weight: 700; }
+.problem .body { padding: 22px 28px 24px; }
+.problem .question {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14.5px; line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+/* Options for SE (checkboxes) */
+.opts-se { list-style: none; padding: 4px 0 0 0; margin: 0; }
+.opts-se li { padding: 4px 0 4px 28px; position: relative; font-size: 14.5px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif; }
+.opts-se li::before { content: "☐"; position: absolute; left: 6px; top: 4px; color: var(--navy); font-size: 14px; }
+
+/* Options for Single TC (radio) */
+.opts-single { list-style: none; padding: 4px 0 0 0; margin: 0; }
+.opts-single li { padding: 4px 0 4px 28px; position: relative; font-size: 14.5px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif; }
+.opts-single li::before { content: "○"; position: absolute; left: 6px; top: 4px; color: var(--navy); font-size: 14px; }
+
+/* Options for Multi TC (table) */
+table.opts-multi { width: 100%; border-collapse: collapse; margin-top: 4px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif; }
+table.opts-multi th { background: var(--navy); color: white; padding: 9px 12px; font-weight: 700; font-size: 13px; text-align: center; }
+table.opts-multi td { padding: 8px 12px; text-align: center; border: 1px solid #999; font-size: 14px; }
+table.opts-multi tr:nth-child(odd) td { background: #F8F8F6; }
+
+/* RCCR specific */
+.problem.rccr .body p { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif; font-size: 14.5px; line-height: 1.7; margin: 0 0 12px; text-align: justify; }
+.problem.rccr .instruction { color: var(--gray); font-style: italic; font-size: 13.5px; margin: 14px 0 6px; }
+.problem.rccr .qstem { color: var(--navy); font-weight: 700; font-size: 14.5px; margin: 16px 0 6px; }
+.problem.rccr .choice { font-size: 14px; padding-left: 16px; margin: 4px 0; line-height: 1.55; }
+
+/* Answer key */
+table.answers { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 14px; }
+table.answers th { background: var(--navy); color: white; padding: 9px 12px; text-align: left; font-weight: 700; }
+table.answers td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+table.answers tr.t1 td { background: var(--soft-cream); }
+table.answers tr.t2 td { background: var(--soft-tier2); }
+table.answers td.num { color: var(--navy); font-weight: 700; width: 22%; }
+
+.foot { text-align: center; margin-top: 28px; padding: 24px 0; color: var(--gray); }
+.foot .quote { font-style: italic; margin-bottom: 6px; }
+.foot .credit { color: var(--navy); font-weight: 700; font-size: 14px; }
+
+@media (max-width: 720px) {
+  .container { padding: 16px 12px 48px; }
+  .cover { padding: 32px 20px 28px; }
+  .cover h1 { font-size: 32px; }
+  .cover .sub { font-size: 16px; }
+  .stats { grid-template-columns: 1fr; }
+  .section, .tier-divider { padding: 22px 18px; }
+  .problem .head { flex-direction: column; }
+  .problem .badge { flex-direction: row; gap: 10px; min-width: 0; padding: 10px 16px; }
+  .problem .ttl { padding: 12px 16px; }
+  .problem .body { padding: 18px 16px; }
+}
+@media print {
+  body { background: white; font-size: 11pt; }
+  .container { max-width: 100%; padding: 0; }
+  .cover, .section, .tier-divider, .problem { box-shadow: none; border: 1px solid #DDD; page-break-inside: avoid; break-inside: avoid; }
+  .problem.rccr { page-break-after: always; }
+  .tier-divider { page-break-before: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     비밀번호 게이트 (수정은 아래 PASSWORD 변수만)
+     ============================================ -->
+<style>
+#pw-gate {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #FAFAF7;
+  display: flex; align-items: center; justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "Noto Sans KR", sans-serif;
+}
+#pw-gate .pw-card {
+  background: white; border: 1px solid #DDDDDD; border-radius: 16px;
+  padding: 48px 40px; max-width: 420px; width: 90%;
+  box-shadow: 0 4px 18px rgba(0,0,0,.05);
+  text-align: center;
+}
+#pw-gate .pw-label {
+  color: #B8860B; font-weight: 700; letter-spacing: .12em;
+  font-size: 12px; margin-bottom: 12px;
+}
+#pw-gate h1 {
+  color: #1F3A5F; font-size: 24px; margin: 0 0 8px;
+  font-weight: 800; letter-spacing: -.01em;
+}
+#pw-gate .pw-sub {
+  color: #4A4A4A; font-size: 14px; margin-bottom: 28px;
+}
+#pw-gate input[type="password"] {
+  width: 100%; padding: 14px 16px; font-size: 16px;
+  border: 1.5px solid #DDDDDD; border-radius: 10px;
+  background: #FAFAF7; color: #222222;
+  outline: none; transition: border-color .15s;
+  font-family: inherit;
+}
+#pw-gate input[type="password"]:focus { border-color: #1F3A5F; }
+#pw-gate button {
+  margin-top: 14px; width: 100%; padding: 14px;
+  background: #1F3A5F; color: white; border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  transition: opacity .15s; font-family: inherit;
+}
+#pw-gate button:hover { opacity: .9; }
+#pw-gate .pw-error {
+  color: #B8860B; font-size: 13px; margin-top: 12px; min-height: 18px;
+  font-weight: 600;
+}
+body.pw-locked { overflow: hidden; }
+body.pw-locked > .container,
+body.pw-locked > section { display: none !important; }
+</style>
+
+<div id="pw-gate">
+  <div class="pw-card">
+    <div class="pw-label">SONG GRE VERBAL</div>
+    <h1>수강생 전용 자료</h1>
+    <p class="pw-sub">비밀번호를 입력해 주세요.</p>
+    <input type="password" id="pw-input" autocomplete="off" autofocus>
+    <button id="pw-submit">확인</button>
+    <div class="pw-error" id="pw-error"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ⬇⬇⬇ 비밀번호는 여기서만 수정하세요 ⬇⬇⬇
+  const PASSWORD = "registersong";
+  // ⬆⬆⬆ 비밀번호는 여기서만 수정하세요 ⬆⬆⬆
+
+  const STORAGE_KEY = "gre_freq30_2026_auth";
+  const gate = document.getElementById("pw-gate");
+  const input = document.getElementById("pw-input");
+  const submit = document.getElementById("pw-submit");
+  const errorEl = document.getElementById("pw-error");
+
+  // 이미 인증된 세션이면 게이트 통과
+  if (sessionStorage.getItem(STORAGE_KEY) === "ok") {
+    gate.remove();
+    document.body.classList.remove("pw-locked");
+    return;
+  }
+  document.body.classList.add("pw-locked");
+
+  function tryUnlock() {
+    if (input.value === PASSWORD) {
+      sessionStorage.setItem(STORAGE_KEY, "ok");
+      gate.remove();
+      document.body.classList.remove("pw-locked");
+    } else {
+      errorEl.textContent = "비밀번호가 올바르지 않습니다.";
+      input.value = "";
+      input.focus();
+    }
+  }
+
+  submit.addEventListener("click", tryUnlock);
+  input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") tryUnlock();
+  });
+})();
+</script>
+<!-- ============================================
+     비밀번호 게이트 끝
+     ============================================ -->
+
+<div class="container">
+
+<section class="cover">
+  <div class="label">GRE VERBAL · 최빈출 풀세트 · 2026</div>
+  <h1>필수 암기 30</h1>
+  <div class="sub">— TCSE 17 + RCCR 13 —</div>
+  <div class="divider"></div>
+  <div class="desc">후기 13개 회차 (2023.09–2026.03) 반복 출제 검증</div>
+  <div class="desc-en">Two-Tier Priority Set for Last-Mile Memorization</div>
+  <div class="stats">
+    <div class="stat t1"><div class="lbl">TIER 1</div><div class="num">10</div><div class="sub">D-1 회독 우선</div></div>
+    <div class="stat t2"><div class="lbl">TIER 2</div><div class="num">20</div><div class="sub">D-7 ~ D-2 회독</div></div>
+    <div class="stat total"><div class="lbl">TOTAL</div><div class="num">30</div><div class="sub">필수 암기 풀세트</div></div>
+  </div>
+  <div class="author">송종옥 GRE Verbal</div>
+  <div class="date">2026.05</div>
+</section>
+
+
+<section class="section" id="intro">
+  <h2>들어가는 글</h2>
+  <div class="rule"></div>
+  <p class="intro-quote">"시험 일주일 전, 무엇을 봐야 합니까?"</p>
+  <p>이 자료는 후기 13개 회차(2023.09–2026.03)에서 2회 이상 반복 출제된 17개 TCSE 번호 + 13개 RCCR 지문, 총 30문제를 모은 필수 암기 풀세트다. 각 문제는 모모집 본문·보기 그대로 가져왔으며, 정답은 마지막 부록 페이지에 별도로 정리되어 있다.</p>
+  <p>두 단계로 나누어 시험 직전 회독 효율을 높였다.</p>
+
+  <div class="tier-box t1">
+    <div class="lbl">TIER 1</div>
+    <div class="ttl">핵심 (D-1 회독 우선) · 10문제</div>
+    <div class="desc">3회 이상 반복 출제된 최우선 번호. TCSE 4개 (146, 1228, 1299, 1943) + RCCR 6개 (332, 700, 745, 789, 855, 858).</div>
+    <div class="when"><b>회독 시점:</b> 시험 전날 마지막 회독. 정답쌍·오답·본문 흐름 즉답 가능 수준까지.</div>
+  </div>
+
+  <div class="tier-box t2">
+    <div class="lbl">TIER 2</div>
+    <div class="ttl">보강 (D-7 ~ D-2 회독) · 20문제</div>
+    <div class="desc">2회 출제 번호. TCSE 13개 + RCCR 7개. 최근 회차 출제 우선.</div>
+    <div class="when"><b>회독 시점:</b> 시험 일주일 전부터 매일 3~5문제씩 회독.</div>
+  </div>
+
+  <h2 style="margin-top: 30px;">문제 색인</h2>
+  <div class="rule"></div>
+  <table class="index">
+    <thead>
+      <tr><th class="center" style="width:8%;">Tier</th><th style="width:18%;">번호</th><th style="width:54%;">주제 / 문제 유형</th><th class="center" style="width:20%;">출제 회수</th></tr>
+    </thead>
+    <tbody><tr class="t1"><td class="tier t1 center">T1</td><td class="num">TCSE 146</td><td>SE</td><td class="center">4회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">TCSE 1228</td><td>SE</td><td class="center">3회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">TCSE 1299</td><td>Triple TC</td><td class="center">3회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">TCSE 1943</td><td>Triple TC</td><td class="center">3회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">RCCR 332</td><td>미국 산업 노조 / industrial unionism</td><td class="center">3회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">RCCR 700</td><td>Sweden 노동 임금 정책</td><td class="center">5회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">RCCR 745</td><td>Pierre Toussaint 미니어처 초상화</td><td class="center">3회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">RCCR 789</td><td>Maya Lowlands 물 관리</td><td class="center">3회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">RCCR 855</td><td>Melville의 Pierre</td><td class="center">3회</td></tr><tr class="t1"><td class="tier t1 center">T1</td><td class="num">RCCR 858</td><td>Monte Verde · 남미 초기 정착</td><td class="center">3회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 125</td><td>Triple TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 163</td><td>SE</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 171</td><td>Double TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 868</td><td>Single TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 936</td><td>Triple TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 1006</td><td>Single TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 1179</td><td>Triple TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 1471</td><td>SE</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 1624</td><td>Double TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 2129</td><td>Single TC</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 2151</td><td>SE</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 2493</td><td>SE</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">TCSE 2494</td><td>SE</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">RCCR 42</td><td>19세기 여성 여행 작가</td><td class="center">3회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">RCCR 187</td><td>19세기 노르웨이 산업화</td><td class="center">3회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">RCCR 678</td><td>Harpacticoids 해양 갑각류</td><td class="center">3회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">RCCR 726</td><td>Stephen Hawking · CERN · pure science</td><td class="center">3회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">RCCR 727</td><td>David Hume · 이성과 윤리</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">RCCR 825</td><td>Robert Philip · 녹음 음악</td><td class="center">2회</td></tr><tr class="t2"><td class="tier t2 center">T2</td><td class="num">RCCR 859</td><td>Mayan ↔ Khmer 문명 비교</td><td class="center">2회</td></tr></tbody>
+  </table>
+</section>
+
+
+<section class="tier-divider">
+  <div class="lbl">TIER 1</div>
+  <h1>핵심 10</h1>
+  <div class="desc">— D-1 마지막 회독 우선 —</div>
+  <div class="divider-line"></div>
+  <p style="font-style: italic; color: var(--gray); font-size: 14px;">3회 이상 반복 출제 · 보기 · 정답쌍 · 오답 함정까지 즉답 수준</p>
+  <div class="nums">
+    TCSE  146 · 1228 · 1299 · 1943<br>
+    RCCR  332 · 700 · 745 · 789 · 855 · 858
+  </div>
+</section>
+
+<section class="section"><h2>Tier 1 · TCSE</h2><div class="rule"></div><p style="font-style: italic; color: var(--gray); font-size: 13.5px;">For each question, follow the specific directions given. Select the best answer(s) for each question.</p>
+    <div class="problem tcse" id="tcse-146">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">TCSE 146</div>
+        </div>
+        <div class="ttl">
+          <h3>Sentence Equivalence</h3>
+          <div class="meta">출제 <span class="freq">4회</span> · 2023.10, 2024 1H, 2024.06-08, 2024.09</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">For certain economists, &quot;pure” economic theory, that is, economic theory __________ a specific social structure, is impossible, much like a concept of anatomy that investigates no specific species.</p>
+        <ul class="opts-se"><li>attuned to</li><li>abstracted from</li><li>derived from</li><li>divorced from</li><li>sensitive to</li><li>analyzed in</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-1228">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">TCSE 1228</div>
+        </div>
+        <div class="ttl">
+          <h3>Sentence Equivalence</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.10, 2023.12, 2024 1H</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Even if the story now seems a surprisingly innocuous overture to the author&#x27;s later, more fully developed narrations, it __________ some of the key traits of those bleaker tales.</p>
+        <ul class="opts-se"><li>avoids</li><li>belies</li><li>undercuts</li><li>anticipates</li><li>possesses</li><li>prefigures</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-1299">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">TCSE 1299</div>
+        </div>
+        <div class="ttl">
+          <h3>Triple Text Completion</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.09b, 2023.11, 2024 1H</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Some climatologists dismiss as (i)__________ the debate among geophysicists over the role of carbon dioxide in global climate change across many millions of years. These climatologists say the evidence of a tie between carbon dioxide and planetary warming over the last few centuries is so (ii)__________ that any longer-term evidence against such a link must somehow be (iii)__________.</p>
+        <table class="opts-multi"><thead><tr><th>Blank (i)</th><th>Blank (ii)</th><th>Blank (iii)</th></tr></thead><tbody><tr><td>unavoidable</td><td>unlikely</td><td>tainted</td></tr><tr><td>irrelevant</td><td>controversial</td><td>accommodated</td></tr><tr><td>undecided</td><td>compelling</td><td>reinforced</td></tr></tbody></table>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-1943">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">TCSE 1943</div>
+        </div>
+        <div class="ttl">
+          <h3>Triple Text Completion</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2024.09, 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">It is inevitable that ongoing research presupposes some accepted science as a principle. Usually no one even notices the implication that the accepted principle is being (i)____________ unless there emerges (ii)____________ that turns out to be sufficiently (iii)____________ that the assumptions underlying the research come to be considered.</p>
+        <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th><th>Blank(iii)</th></tr></thead><tbody><tr><td>jeopardized</td><td>an anomaly</td><td>trivial</td></tr><tr><td>revised</td><td>a consensus</td><td>transparent</td></tr><tr><td>tested</td><td>a distinction</td><td>recalcitrant</td></tr></tbody></table>
+      </div>
+    </div>
+    </section>
+<section class="section"><h2>Tier 1 · RCCR</h2><div class="rule"></div>
+    <div class="problem rccr" id="rccr-332">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">RCCR 332</div>
+        </div>
+        <div class="ttl">
+          <h3>미국 산업 노조 / industrial unionism</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.09b, 2023.10, 2024 1H</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Most feminist labor historians believe that the emergence and rapid general adoption of industrial unionism in the late 1930s was essential for the success of efforts to organize large numbers of women workers into unions. They argue that industrial unionism&#x27;s commitment to recruiting unskilled workers and its abandonment of racial and gender exclusiveness was more attractive to women workers (who, according to these scholars, were largely unskilled) than was the earlier exclusionary craft-union model. The successful organization of women garment workers in the 1910s does not undermine this dominant view, since the garment unions welcomed women workers of every skill level, prefiguring the industrial form of unionism. However, the fact that another organization, the very successful Women&#x27;s Trade Union League, effectively recruited in other industries using the then-prevalent craft-union approach--setting performance standards for members, offering them advanced training programs, and disciplining members who had substandard job performance--is less easily explained.</p>
+<p class="qstem">1. According to the author, the successful organization of women garment workers is consistent with the dominant view of women labor history because</p>
+<p class="choice">A. garment unions concentrated their recruitment efforts exclusively on attracting unskilled workers as members</p>
+<p class="choice">B. those women garment workers who joined the garment unions were not as skilled as those who refused to join</p>
+<p class="choice">C. garment unions accepted both skilled and unskilled workers as members</p>
+<p class="choice">D. garment unions lacked exclusionary racial rules as well as rules barring unskilled workers</p>
+<p class="choice">E. most garment workers were relatively skilled craft workers rather than unskilled workers</p>
+<p class="qstem">2. The author of the passage is primarily concerned with</p>
+<p class="choice"><b>A.</b> pointing out similarities and differences between two types of women&#x27;s unionism</p>
+<p class="choice"><b>B.</b> presenting evidence related to a belief about the unionization of women workers</p>
+<p class="choice"><b>C.</b> giving a description of one particular model of unionization and its impact on women workers</p>
+<p class="choice"><b>D.</b> reconciling two disparate views of the early history of women&#x27;s labor unions</p>
+<p class="choice"><b>E.</b> suggesting the reasons for the success of a particular effort to unionize women workers</p>
+<p class="qstem">3. The author of the passage discusses the Women&#x27;s Trade Union League most probably in order to</p>
+<p class="choice">A. support the point of view presented by feminist labor historians</p>
+<p class="choice">B. suggest that the dominant view of industrial unionism is not entirely satisfactory</p>
+<p class="choice">C. provide an example of the success of industrial unionism in organizing women workers before the 1930s</p>
+<p class="choice">D. explain the connection that feminist labor historians make between industrial unionism and the craft-union movement</p>
+<p class="choice">E. illustrate the gender exclusivity of early attempts to organize women workers</p>
+<p class="qstem">4. The passage suggests that feminist labor historians argue that industrial unionism is an approach that</p>
+<p class="choice"><b>A.</b> did not succeed when it was used as the basis for efforts to unionize skilled workers</p>
+<p class="choice"><b>B.</b> has rarely been considered the single most important factor responsible for the successful organization of large numbers of women workers</p>
+<p class="choice"><b>C.</b> owed its emergence in the late 1930s and its subsequent spread primarily to the earlier craft unions&#x27; failure to organize Women and minority workers</p>
+<p class="choice"><b>D.</b> has been firmly committed to forcing employers to abandon exclusionary or discriminatory hiring policies</p>
+<p class="choice"><b>E.</b> tended to open union membership to workers who would probably not have been recruitable by unions adopting the earlier craft-union model</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-700">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">RCCR 700</div>
+        </div>
+        <div class="ttl">
+          <h3>Sweden 노동 임금 정책</h3>
+          <div class="meta">출제 <span class="freq">5회</span> · 2023.09b, 2023.12, 2024 1H, 2024.09, 2025.11.07</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Until the mid-1980s, Swedish workers’ wages were largely determined through centralized collective bargaining at a national level, a <b>policy</b> aimed at achieving equal pay for equal work across companies and industries. This policy, designed to raise the relative wages of low-wage workers, resulted in a <b>decrease</b> in overall wage inequality in Sweden&#x27;s labor market. Furthermore, this policy may have indirectly resulted in a relatively small gender wage gap difference between women&#x27;s wages and those of similarly qualified men: several recent <b>studies</b> have demonstrated that decentralized wage bargaining produces relatively large wage inequality in general and large gender wage differentials in particular, and international comparisons show that a society&#x27;s overall wage inequality is positively related to the gender wage gap. </p>
+<p>Therefore, in designing a study of organizational factors that perpetuate inequities in women&#x27;s wages, researchers decided to gather data on the current situation in Swedish companies. The researchers reasoned that the occurrence of discriminatory wage- setting practices in Swedish companies could provide a conservative estimate of the prevalence of such practices in other developed countries. Despite increasing decentralization of Sweden&#x27;s wage-bargaining process since the mid-1980s, they reasoned, the effects of the earlier policy on current wages should still be evident to some extent. </p>
+<p class="qstem">1. The author of the passage attributes the highlighted &quot;decrease&quot; to which of the following?</p>
+<p class="choice">A. A decline in Sweden&#x27;s gender wage gap</p>
+<p class="choice">B. A decline in low-wage workers&#x27; wages in Sweden</p>
+<p class="choice">C. A decline in women’s wages in Sweden</p>
+<p class="choice">D. A policy governing wage bargaining in Sweden</p>
+<p class="choice">E. A change in Sweden&#x27;s wage-bargaining practices initiated in the mid-1980s</p>
+<p class="qstem">2. If the researchers&#x27; reasoning presented in the last paragraph of the passage is correct, then which of the following would be most likely to be true?</p>
+<p class="choice">A. Organizational factors that perpetuate inequities in women’s wages are less prevalent in Swedish companies today than they were prior to the mid-1980s.</p>
+<p class="choice">B. The gender wage gap in Sweden is larger today than it was prior to the mid-1980s but smaller than that in many other developed countries.</p>
+<p class="choice">C. Discriminatory wage-setting practices have declined in Sweden since the mid -1980s but not as sharply as they have declined in many other developed countries.</p>
+<p class="choice">D. Overall wage inequality in Sweden has declined more sharply since the mid -1980s than it did during the period when centralized wage-bargaining processes prevailed in Sweden.</p>
+<p class="choice">E. Women workers occupy more high-level positions in Swedish companies than they do in companies in many other developed countries.</p>
+<p class="qstem">3. The passage suggests which of the following about the highlighted “policy”?</p>
+<p class="choice">A. It was abandoned in the mid-1980s because it was no longer considered effective.</p>
+<p class="choice">B. Its effect on Sweden&#x27;s labor market has been debated in several recent studies.</p>
+<p class="choice">C. Its effect on Sweden’s labor market was consistent with the intentions that led to its adoption.</p>
+<p class="choice">D. It produced an indirect result that ran counter to a widespread assumption about the effect of centralized collective bargaining on wages.</p>
+<p class="choice">E. It was modeled on policies that had been adopted in several other developed countries.</p>
+<p class="qstem">4. It can be inferred that the highlighted “studies” lend support to which of the following statements about women workers wages? </p>
+<p class="choice">A. In most countries,women workers wages would not likely be affected by centralized collective bargaining in the same way as they were in Sweden prior to the mid-1980s. </p>
+<p class="choice">B. In most countries, women workers wages are closer to the wages of similarly qualified men than they are in Sweden. </p>
+<p class="choice">C. Women workers wages are generally less affected by centralized collective bargaining than are men&#x27;s wages. </p>
+<p class="choice">D. Women workers wages are sometimes adversely affected by wage setting practices that are intended to remedy overall wage inequality. </p>
+<p class="choice">E. Women workers&#x27; wages are generally closer to the wages of similarly qualified male workers where wages are set through centralized wage bargaining than where they are set through decentralized wage bargaining.</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-745">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">RCCR 745</div>
+        </div>
+        <div class="ttl">
+          <h3>Pierre Toussaint 미니어처 초상화</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.10, 2023.12, 2024 1H</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>In 1825, emancipated slave Pierre Toussaint, who had become a successful New York hairdresser, commissioned miniature portraits of himself, his wife, Juliette, and his adopted niece. It was an unconventional choice. Judging by the <b>extant evidence</b>, those few antebellum African Americans who commissioned portraits chose bust-sized oil paintings, paintings that announced their status--their respectability, their prosperity, and their personhood--to the public at large. And, given the implicit publicity of these paintings, it is not surprising that so many represent men: African-descended ministers, activists, barbers, and men of affairs, men who were assuming positions of leadership within the North&#x27;s free black communities. It is not clear why Toussaint, a public-minded man who was deeply involved in a variety of philanthropic efforts, diverged from this pattern by choosing to represent himself, much less his entire family, in a genre so closely associated with domestic intimacy. Perhaps he associated miniatures with the gentility and refinement of his wealthy clientele. Perhaps he was attracted to the genre&#x27;s familial associations. Toussaint was, after all, a man who prized family, who expended great effort to preserve family ties against overwhelming odds; after moving to New York, he had tried repeatedly and unsuccessfully to recover family members who had been lost during the Haitian Revolution. Or perhaps miniatures recalled a pivotal moment in his own life, a moment that fused gentility, familial intimacy, and freedom, for when Toussaint&#x27;s former mistress was on her deathbed, she bequeathed him her miniature portrait along with his freedom papers.</p>
+<p class="qstem">1. The primary purpose of the passage is to</p>
+<p class="choice">A. explain the importance of a historical figure</p>
+<p class="choice">B. evaluate the evidence used to support a claim</p>
+<p class="choice">C. consider the implications of a particular choice</p>
+<p class="choice">D. contrast the social meanings of two kinds of paintings</p>
+<p class="choice">E. establish the historical context for an artistic trend</p>
+<p class="qstem">2. Which of the following is an assumption apparently underlying the author&#x27;s discussion of Toussaint?</p>
+<p class="choice">A. Toussaint&#x27;s commissioning of miniature family portraits instead of bust-sized portraits was not significantly influenced by differences in the costs associated with the two genres. </p>
+<p class="choice">B. Miniature portraits of family members were not often commissioned by the same patrons who commissioned larger, more ostentatious portraits in antebellum New York.</p>
+<p class="choice">C. Successful antebellum African Americans in New York did not generally regard different genres of painting as reflective of different kinds of values.</p>
+<p class="choice">D. The frequency with which African Americans commissioned family portraits increased significantly during Toussaint&#x27;s lifetime.</p>
+<p class="choice">E. Toussaint harbored highly conflicted feelings about the former mistress who bequeathed him her miniature portrait when she was on her deathbed.</p>
+<p class="qstem">3. It can be inferred that the &quot;extant evidence&quot;</p>
+<p class="choice">A. gives the impression that a larger number of African Americans commissioned portraits during this period than was actually the case</p>
+<p class="choice">B. indicates African Americans&#x27; preference for family portraits over individual portraits during this period</p>
+<p class="choice">C. reflects the popularity of large oil paintings of African American families during this period</p>
+<p class="choice">D. includes few miniature portraits of influential African American men</p>
+<p class="choice">E. suggests that African Americans&#x27; portraits were generally painted by African American artists</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-789">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">RCCR 789</div>
+        </div>
+        <div class="ttl">
+          <h3>Maya Lowlands 물 관리</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2024.09, 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Availability and management of water greatly influenced human settlement in the Maya Lowlands, and much of Mayan social innovation was centered on storing excess water for times of need. In northern Yucatan the permanent water table is sufficiently shallow that it can be accessed by natural wells known as cenotes. However, over much of the Maya Lowlands, the water table is too deep to have been available to the Maya. In response, they constructed artificial reservoirs to trap runoff. For example, Gallopin estimates that the reservoirs at Tikal (an ancient Mayan city) could have provided for the domestic needs of about 9,600 people for a period of 6 to 18 months. Even with elaborate water capture and management systems, the Maya were greatly dependent upon adequate rainfall over much of their empire and were thus susceptible to frequent or prolonged droughts that approached or exceeded the capacity of their reservoirs. In fact, evidence of droughts in the region based on <b>studies of lake and shallow ocean sediments</b> has led many researchers to suspect that climate was responsible for the Classic Maya collapse.</p>
+<p class="qstem">1. The author mentions &quot;studies of lake and shallow ocean sediments&quot; primarily in order to</p>
+<p class="choice">A. describe the results of a novel study</p>
+<p class="choice">B. identify the source of evidence that suggested a hypothesis</p>
+<p class="choice">C. undermine a conventional explanation</p>
+<p class="choice">D. highlight the importance of one type of evidence</p>
+<p class="choice">E. clarify the value of a particular undertaking</p>
+<p class="qstem">2. The passage suggests which of the following about the reservoirs at Tikal?</p>
+<p class="choice">A. They may have been designed by people from northern Yucatan.</p>
+<p class="choice">B. They may have hastened the Classic Maya collapse.</p>
+<p class="choice">C. They were insufficient to protect the Maya against some lingering droughts.</p>
+<p class="choice">D. They were more effective than the cenotes found in northern Yucatan.</p>
+<p class="choice">E. They formed a basis for certain Mayan cultural traditions.</p>
+<p class="qstem">3. The passage suggests which of the following about cenotes?</p>
+<p class="choice">A. They allowed people in northern Yucatan to avoid dependence on artificial reservoirs.</p>
+<p class="choice">B. They were less capacious than the artificial reservoirs found in the Maya Lowlands.</p>
+<p class="choice">C. They helped protect people in the Maya Lowlands from prolonged droughts.</p>
+<p class="choice">D. They allowed the Maya to store excess water for times of need.</p>
+<p class="choice">E. They were an important Mayan social innovation.</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-855">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">RCCR 855</div>
+        </div>
+        <div class="ttl">
+          <h3>Melville의 Pierre</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.12, 2025.08, 2026.02-03</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Most twentieth-century critics read Melville&#x27;s Pierre as a parody of the sentimental novel. They point to its overblown prose and hyperbolic rendering of domestic manners to argue that Pierre is a barbed antique of bourgeois politesse. A variation of this reading stresses Melville&#x27;s strategic sentimentalism, positing that Pierre&#x27;s romanticfamilial plot was meant to engage superficial readers, while the book&#x27;s deeper elements were aimed at his true audience. Both readings emphasize Melville&#x27;s aloofness and authorial control, imagining the writer by turns mocking and hoodwinking a feckless readership. Such a strategy, however, implies a cool detachment of the artist from his creation, when in fact Melville is never more personally involved or more in earnest than he is in Pierre.</p>
+<p class="instruction"><b>For the following question, consider each of the choices separately and select</b><b> </b><b>all</b><b> </b><b>that apply.</b></p>
+<p class="qstem">1. According to the passage, twentieth-century critics cite which of the following in support of the idea that in Pierre, Melville is “by turns mocking and hoodwinking a feckless readership&quot;? </p>
+<p class="choice">A. Melville&#x27;s personal involvement in his creation </p>
+<p class="choice">B. Melville&#x27;s use of an extravagant writing style </p>
+<p class="choice">C. Melville&#x27;s exaggerated depiction of bourgeois society Select one answer choice.</p>
+<p>2.Select the sentence that presents a reason for questioning twentieth-century readings of Pierre. </p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-858">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 1</div>
+          <div class="n">RCCR 858</div>
+        </div>
+        <div class="ttl">
+          <h3>Monte Verde · 남미 초기 정착</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.12, 2024.06-08, 2025.08</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Widely accepted as the earliest known site of occupation in South America, Monte Verde in southern Chile is dated to roughly 13,500 years ago. But Monte Verde is a considerable distance from early people&#x27;s point of entry into South America (through the Isthmus of Panama into what is now northwestern Colombia). Therefore, most archaeologists suppose that the initial occupation of the continent began a millennium or so earlier.</p>
+<p>Certain sites have been said to imply an even earlier human presence in South America. Among the most controversial of these is Pikimachay, a naturally sculpted rock shelter found in the Andean foothills, which was excavated in the 1970s. The earliest dates from the site range from 14,000 to 20,000 years ago. Archaeologists found flake tools and bones of a ground sloth presumed to have been butchered there. However, the earliest of the purported artifacts are made from the same type of stone that makes up the cave wall, and most archaeologists are not convinced they show clear <b>signs of purposeful shaping</b>. Furthermore, none of the sloth bones (which produced the early dates) gave evidence of burning or modification by human hands.</p>
+<p class="qstem">1. The primary purpose of the passage is to</p>
+<p class="choice">A. discuss evidence relating to the earliest human presence in South America</p>
+<p class="choice">B. question widely accepted dates about the earliest human occupation of South America</p>
+<p class="choice">C. present an overview of recent archaeological work in South America</p>
+<p class="choice">D. compare two important sites of early human occupation in South America</p>
+<p class="choice">E. consider a controversy regarding early people&#x27;s point of entry into South America</p>
+<p class="qstem">2. In the context of the passage, &quot;signs of purposeful shaping&quot; are significant for which of the following reasons?</p>
+<p class="choice">A. Most tools that date from 14,000 to 20,000 years ago do not show signs of such shaping.</p>
+<p class="choice">B. Flake tools generally are not the products of such shaping.</p>
+<p class="choice">C. Such signs would constitute evidence of human activity.</p>
+<p class="choice">D. Such signs would indicate that Pikimachay was unusual among early settlements in South America.</p>
+<p class="choice">E. Such signs would suggest that tool use was more widespread than previously believed.</p>
+<p class="qstem">3. According to the passage, sloth bones found at Pikimachay have been used by some scholars in an effort to determine which of the following?</p>
+<p class="choice">A. When Pikimachay might have first been occupied</p>
+<p class="choice">B. What sort of human culture might have existed at Pikimachay</p>
+<p class="choice">C. What sort of diet any humans at Pikimachay might have had</p>
+<p class="choice">D. How many people the Pikimachay area could have supported</p>
+<p class="choice">E. How many sloths existed in the Pikimachay area</p>
+      </div>
+    </div>
+    </section>
+
+<section class="tier-divider">
+  <div class="lbl">TIER 2</div>
+  <h1>보강 20</h1>
+  <div class="desc">— D-7 ~ D-2 회독 보강 —</div>
+  <div class="divider-line"></div>
+  <p style="font-style: italic; color: var(--gray); font-size: 14px;">2회 출제 번호 · 최근 회차 우선 · 매일 3~5문제 회독 권장</p>
+  <div class="nums">
+    TCSE  125 · 163 · 171 · 868 · 936 · 1006 · 1179 · 1471 · 1624 · 2129 · 2151 · 2493 · 2494<br>
+    RCCR  42 · 187 · 678 · 726 · 727 · 825 · 859
+  </div>
+</section>
+
+<section class="section"><h2>Tier 2 · TCSE</h2><div class="rule"></div><p style="font-style: italic; color: var(--gray); font-size: 13.5px;">For each question, follow the specific directions given. Select the best answer(s) for each question.</p>
+    <div class="problem tcse" id="tcse-125">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 125</div>
+        </div>
+        <div class="ttl">
+          <h3>Triple Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">His idea to make money by building a drone that could fly from the West Coast to Hawaii while continuously sending back low-altitude weather data is a characteristically (i)__________ project. The (ii)__________ of good storm-intensity forecasts has huge economic costs, but filling that need won&#x27;t automatically generate big profits because the economic benefits are (iii)__________.</p>
+        <table class="opts-multi"><thead><tr><th>Blank (i)</th><th>Blank (ii)</th><th>Blank (iii)</th></tr></thead><tbody><tr><td>quixotic</td><td>ubiquity</td><td>almost inevitable</td></tr><tr><td>mercenary</td><td>accuracy</td><td>hard to envision</td></tr><tr><td>resourceful</td><td>dearth</td><td>so widely diffused</td></tr></tbody></table>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-163">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 163</div>
+        </div>
+        <div class="ttl">
+          <h3>Sentence Equivalence</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2023.10, 2023.12</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">If big sums are to be spent on cleaning up environment tragedies, it is better to spend them on monotonous but __________ problems like unsanitary water in third world countries.</p>
+        <ul class="opts-se"><li>futile</li><li>ephemeral</li><li>pressing</li><li>controversial</li><li>transitory</li><li>critical</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-171">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 171</div>
+        </div>
+        <div class="ttl">
+          <h3>Double Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2023.12, 2024.09</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Though dealers insist that professional art dealers can make money in the art market, even an (i)__________ knowledge is not enough: the art world is so fickle that stock-market prices are (ii)__________ by comparison.</p>
+        <table class="opts-multi"><thead><tr><th>Blank (i)</th><th>Blank (ii)</th></tr></thead><tbody><tr><td>amateur’s</td><td>erratic</td></tr><tr><td>artist’s</td><td>booming</td></tr><tr><td>expert’s</td><td>predictable</td></tr></tbody></table>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-868">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 868</div>
+        </div>
+        <div class="ttl">
+          <h3>Single Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2024.09, 2025.03-07</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">My grandma has a strong belief in all things ________: she insists, for example, that the house in which she lived as a child was haunted.</p>
+        <ul class="opts-single"><li>clamorous</li><li>invidious</li><li>numinous</li><li>empirical</li><li>sonorous</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-936">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 936</div>
+        </div>
+        <div class="ttl">
+          <h3>Triple Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">The (i)__________ of dissociative disorder sections in commonly used general psychiatric screening instruments has led to the (ii)__________ of dissociative disorders in large-scale epidemiological studies for many decades. Although studies using specific instruments have begun to correct this lack, the inclusion of testing for dissociative disorders in future general psychiatric screening studies is (iii)__________ for prevention of false negative diagnosis in future research, will facilitate better differential diagnosis between dissociative and other psychiatric disorders, and will also help to gather detailed information.</p>
+        <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th><th>Blank(iii)</th></tr></thead><tbody><tr><td>dearth</td><td>acquittal</td><td>debatable</td></tr><tr><td>abundance</td><td>justification</td><td>fundamental</td></tr><tr><td>confounding</td><td>omission</td><td>incongruous</td></tr></tbody></table>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-1006">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 1006</div>
+        </div>
+        <div class="ttl">
+          <h3>Single Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2023.09b, 2024 1H</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">In the nineteenth century, geology became so respected among middle-class Britons that the science came to be seen as a(n) __________ yardstick by which other disciplines measured their scientific rigor and imaginative power.</p>
+        <ul class="opts-single"><li>accessible</li><li>derivative</li><li>pragmatic</li><li>empirical</li><li>paradigmatic</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-1179">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 1179</div>
+        </div>
+        <div class="ttl">
+          <h3>Triple Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Anthony Kenny states that although his A New History of Western Philosophy is intended for undergraduates, he aimed to write it in a lighthearted manner that will give (i)__________ to those who read the history “not for curricular purposes but for their own enjoyment”. His book is certainly enlightening, and although the bibliography includes technical works liable to (ii)__________ the newcomer, the work is written at a level that generally (iii)__________ between elementary and advanced.</p>
+        <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th><th>Blank (iii)</th></tr></thead><tbody><tr><td>solace</td><td>baffle</td><td>strike a good balance</td></tr><tr><td>pleasure</td><td>initiate</td><td>makes fine distinctions</td></tr><tr><td>offense</td><td>suit</td><td>rejects the difference</td></tr></tbody></table>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-1471">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 1471</div>
+        </div>
+        <div class="ttl">
+          <h3>Sentence Equivalence</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2023.10, 2024 1H</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Three of the nation&#x27;s largest airlines could be operating under bankruptcy protection in coming weeks, analysts say, the latest sign of the industry&#x27;s __________ as it lurches through a historic transformation.</p>
+        <ul class="opts-se"><li>upheaval</li><li>exorbitance</li><li>affluence</li><li>peril</li><li>convulsion</li><li>opulence</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-1624">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 1624</div>
+        </div>
+        <div class="ttl">
+          <h3>Double Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2023.10, 2024 1H</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Although it is not uncommon for journalists to portray political inexperience on the part of public officials as an (i)__________, it was nevertheless surprising when members of the press treated the new senator’s obvious (ii)__________ as an extraordinary virtue.</p>
+        <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th></tr></thead><tbody><tr><td>advantage</td><td>nonchalance</td></tr><tr><td>impediment</td><td>acumen</td></tr><tr><td>exception</td><td>naiveté</td></tr></tbody></table>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-2129">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 2129</div>
+        </div>
+        <div class="ttl">
+          <h3>Single Text Completion</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Many people think of the city as so extreme in its cultural fusion that it is ___________, but this study advances the opposite claim, that the city is actually representative of the nation as a whole.</p>
+        <ul class="opts-single"><li>protean</li><li>discordant</li><li>anomalous</li><li>ungovernable</li><li>adulterated</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-2151">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 2151</div>
+        </div>
+        <div class="ttl">
+          <h3>Sentence Equivalence</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">The safety features of modern cars have actually had ___________ effect on people&#x27;s driving: drivers are lulled into a false sense of security by their cars’ sophistication and therefore drive less attentively.</p>
+        <ul class="opts-se"><li>an unintended</li><li>an unaccountable</li><li>an inconsequential</li><li>a deleterious</li><li>a negligible</li><li>a pernicious</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-2493">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 2493</div>
+        </div>
+        <div class="ttl">
+          <h3>Sentence Equivalence</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2024.06-08, 2025.08</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">Toni Morrison’s 1998 novel was originally called War, but her publisher was concerned abou the title’s effects on efforts to market the book; in order to ___________ those apprehensions, Morrison changed the title to Paradise.</p>
+        <ul class="opts-se"><li>avert</li><li>palliate</li><li>vindicate</li><li>uphold</li><li>allay</li><li>examine</li></ul>
+      </div>
+    </div>
+    
+    <div class="problem tcse" id="tcse-2494">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">TCSE 2494</div>
+        </div>
+        <div class="ttl">
+          <h3>Sentence Equivalence</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2024.09, 2025.08</div>
+        </div>
+      </div>
+      <div class="body">
+        <p class="question">In one commentator&#x27;s view, modern free traders are complete __________ because they show no interest in practicality, nuance, or flexibility on the issue of free trade.</p>
+        <ul class="opts-se"><li>ideologues</li><li>cynics</li><li>zealots</li><li>simpletons</li><li>hypocrites</li><li>phonies</li></ul>
+      </div>
+    </div>
+    </section>
+<section class="section"><h2>Tier 2 · RCCR</h2><div class="rule"></div>
+    <div class="problem rccr" id="rccr-42">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">RCCR 42</div>
+        </div>
+        <div class="ttl">
+          <h3>19세기 여성 여행 작가</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2024.09, 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Writing about nineteenth-century women’s travel writing, Lila Harper notes that the four women she discussed used their own names, in contrast with the nineteenth-century female novelists who either published anonymously or used male pseudonyms. The novelists doubtless realized that they were breaking boundaries, whereas three of the four daring, solitary travelers espoused traditional values, eschewing radicalism and women’s movements. Whereas the female novelists criticized their society, the female travelers seemed content to leave society as it was while accomplishing their own liberation. In other words, they lived a <b>contradiction</b>. For the subjects of Harper’s study, solitude in both the private and public spheres prevailed—a solitude that conferred authority, hitherto a male prerogative, but that also precluded any collective action or female solidarity.</p>
+<p class="qstem">1. Which of the following best characterizes the “contradiction” that the author refers to?</p>
+<p class="choice">A. The subjects of Harper’s study enjoyed solitude, and yet as travelers they were often among people.</p>
+<p class="choice">B. Nineteenth-century travel writers used their own names, but nineteenth-century novelists used pseudonyms.</p>
+<p class="choice">C. Women’s movements in the nineteenth-century were not very radical in comparison with those of the twentieth-century.</p>
+<p class="choice">D. Nineteenth-century female novelists thought they were breaking boundaries, but it was the nineteenth-century women who traveled alone who were really doing so.</p>
+<p class="choice">E. While traveling alone in the nineteenth-century was considered a radical act for a woman, the nineteenth-century solitary female travelers generally held conventional views.</p>
+<p class="instruction"><b>Consider each of the choices separately and select all that apply.</b></p>
+<p class="qstem">2. According to the passage, solitude had which of the following effects for the nineteenth century female travelers?</p>
+<p class="choice">A. It conferred an authority typically enjoyed only by men.</p>
+<p class="choice">B. It prevented formation of alliances with other women.</p>
+<p class="choice">C. It relieved peer pressure to conform to traditional values.</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-187">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">RCCR 187</div>
+        </div>
+        <div class="ttl">
+          <h3>19세기 노르웨이 산업화</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.12, 2024 1H, 2025.03-07</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Like Germany, but unlike other European nations, Norway industrialized rather late in the nineteenth century. Compared to Germany, however, Norway has a comparatively recent history of industrially based social classes and a much longer history of rather egalitarian class relations. The origin of Norwegian egalitarian predates industrialism and the rise of the labor movement. The preindustrial economy was based largely on a small independent peasantry who combined agriculture with fishing (in the north) or with forestry (in the south). Because Norway was under foreign rule for five centuries until 1905, and because the topography is unfavorable for large estates, a strong aristocracy and landowner class did not emerge in most of Norway. There were some exceptions to this pattern, especially in the southern regions where a landowner class did exist. Norway’s early social and economic history engendered egalitarianism, although, as has been pointed out by several observers, it was an equality of poverty. </p>
+<p class="qstem">1. The passage is primarily concerned with discussing the  </p>
+<p class="choice">A. link between poverty and equality in the preindustrial state </p>
+<p class="choice">B. characteristics of industrial society shared by Norway and Germany </p>
+<p class="choice">C. effects of industrialization on social and economic relations in Norway </p>
+<p class="choice">D. roots of social equality in Norway </p>
+<p class="choice">E. emergence of social classes in Norway and Germany </p>
+<p class="qstem">2. According to the passage, northern and southern Norway differed in which of the following ways in the nineteenth century? </p>
+<p class="choice">A. a landowning class was more likely to be found in southern Norway than in northern Norway. </p>
+<p class="choice">B. Southern Norwegian peasants relied primarily on fishing for subsistence, while Northern Norwegians relied on forestry. </p>
+<p class="choice">C. agriculture was a significant activity in southern Norway but not in northern Norway </p>
+<p class="choice">D. Southern Norway industrialized earlier than did northern Norway </p>
+<p class="choice">E. foreign rule effected southern Norway more profoundly than it did northern Norway </p>
+<p class="qstem">3. The passage suggests which of the following about egalitarianism in Norway? </p>
+<p class="choice">A. It was a source of social stability that helped Norway survive five centuries of foreign rule  </p>
+<p class="choice">B. It manifested itself in the same way after industrialization as it had prior to industrialization </p>
+<p class="choice">C. It did not necessarily provide a high standard of living for most Norwegians </p>
+<p class="choice">D. It produced a Norwegian industrialization that differed qualitatively from industrialization in other European countries in that the labor movement was less radical in Norway </p>
+<p class="choice">E. It was more pervasive in southern than in northern Norway</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-678">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">RCCR 678</div>
+        </div>
+        <div class="ttl">
+          <h3>Harpacticoids 해양 갑각류</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2023.12, 2024 1H, 2024.09</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>The crustaceans known as harpacticoids are very widespread in marine sediments, where they feed on microorganisms by ingesting the sediment particles to which the microorganisms adhere. Heavy metals, such as those found in industrial pollution, readily adhere to sediment particles. Harpacticoids are poisoned by heavy metals but are unaffected by most other pollutants. Therefore the concentration of harpacticoids in an area is a good indication of whether that marine environment contains heavy metals.</p>
+<p><b>Which of the following is an assumption on which the argument relies?</b></p>
+<p class="choice">A. Industrial pollution is the principal source of heavy metals in marine sediments.</p>
+<p class="choice">B. Harpacticoids are the only crustaceans that feed on microorganisms by ingesting sediment particles.</p>
+<p class="choice">C. Harpacticoids are more susceptible to poisoning by heavy metals than are other marine organisms.</p>
+<p class="choice">D. The microorganisms that harpacticoids feed on are not killed by pollutants that are harmless to harpacticoids.</p>
+<p class="choice">E. The microorganisms that harpacticoids feed on absorb heavy metals.</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-726">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">RCCR 726</div>
+        </div>
+        <div class="ttl">
+          <h3>Stephen Hawking · CERN · pure science</h3>
+          <div class="meta">출제 <span class="freq">3회</span> · 2025.03-07, 2025.05, 2026.02-03</div>
+        </div>
+      </div>
+      <div class="body">
+        <p><i>This passage is adapted from an essay published in 2010.</i></p>
+<p>As I write, the Large Hadron Collider, the world`s biggest atom- smasher at CERN in Geneva, has switched on with almost unprecedented media jamboree. Asked about the practical value of it all. Stephen Hawking has said that &quot;modern society is based on advances in pure science that were not foreseen to have practical applications.&quot; It&#x27;s a common claim, and it subtly reinforces the hierarchy that Medawar identified: technology and engineering are the humble offspring of pure science, the casual cast-offs of a more elevated pursuit.</p>
+<p>I don&#x27;t believe that such pronouncements are intended to denigrate applied science as an intellectual activity; they merely speak into a culture in which that has already happened. Pure science undoubtedly does lead to applied spin-offs, but this is not the norm. Rather, most of our technology has come from <b>explicit and painstaking efforts</b> to develop it. And this is simply a part of the scientific enterprise. A dividing line between pure and applied science makes no sense at all, running as it does in a convoluted path through disciplines, departments, even individual scientific papers and careers. Research aimed at applications fills the pages of the leading journals in physics, chemistry, and the life and Earth sciences; curiosity-driven research with no real practical value is abundant in the &quot;applied&quot; literature of the materials, biotechnological, and engineering sciences. The fact that &quot;pure&#x27;&quot; and &quot;applied&quot; science are useful and meaningful terms seduces us sometimes into thinking that they are real, absolute, and distinct categories.</p>
+<p class="qstem">1. In the context of the passage, the mention of the Large Hadron Collider primarily serves to</p>
+<p class="choice">A. demonstrate the attention that is paid to what some consider pure science</p>
+<p class="choice">B. introduce a change in the prevailing attitude toward science</p>
+<p class="choice">C. call into question the currently existing priorities for scientific research</p>
+<p class="choice">D. illustrate the contributions that applied science has made to pure science</p>
+<p class="choice">E. cast doubt on the hierarchy identified by Medawar</p>
+<p class="qstem">2. The passage implies that the statement made by Stephen Hawking has which shortcoming?</p>
+<p class="choice">A. It overstates the importance of technology for modern society.</p>
+<p class="choice">B. It fails to recognize the distinct goals of pure and applied science.</p>
+<p class="choice">C. It ignores the work involved in turning initial insights into useful technology.</p>
+<p class="choice">D. It treats somewhat unusual cases as if they were the general rule.</p>
+<p class="choice">E. It inappropriately understates the value of pure science.</p>
+<p class="qstem">3. According to the passage, the &quot;<b>explicit and painstaking efforts</b>&quot; are</p>
+<p class="choice">A. part of the same overall endeavor as pure science research</p>
+<p class="choice">B. the foundation of the techniques that allow advances in pure science</p>
+<p class="choice">C. needed before the findings of pure science have practical benefit</p>
+<p class="choice">D. in danger of dying out because of the attractions of pure science</p>
+<p class="choice">E. ultimately of greater importance than the great majority of work in pure science</p>
+<p class="qstem">4. The primary purpose of the passage is to</p>
+<p class="choice">A. present a new approach to a problem </p>
+<p class="choice">B. criticize the attention paid to science </p>
+<p class="choice">C. point out a useful distinction</p>
+<p class="choice">D. outline disputing positions</p>
+<p class="choice">E. challenge a prevailing attitude</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-727">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">RCCR 727</div>
+        </div>
+        <div class="ttl">
+          <h3>David Hume · 이성과 윤리</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2025.03-07, 2025.05</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>It is common to quote David Hume arguing against the possibility of reasoned ethics--for example, his observation that &quot;the rules of morality ... are not conclusions of our reason.&quot; Hume&#x27;s remarks on the relation between reason and ethics are so myriad that it would be presumptuous to seek a definitive clarification of his position. But it is worth noting that immediately preceding the remark just quoted, Hume declares: &quot;Morals excite passions, and produce or prevent actions. Reason of itself is utterly impotent in this particular.&quot; The qualification &quot;of itself&quot; is important to note. This is, in fact, not an argument that reason is unimportant for morality or for motivating action. It argues only that reason cannot accomplish this entirely on its own.</p>
+<p class="qstem">1. The primary purpose of the passage is to</p>
+<p class="choice">A. argue that contrary to the conventional interpretation, Hume saw reason as playing the central role in ethical decisions</p>
+<p class="choice">B. suggest that Hume viewed reason and morality as being equally strong motivations for action</p>
+<p class="choice">C. criticize Hume for failing to provide a definitive clarification of his position on the relationship between reason and ethics</p>
+<p class="choice">D. explain why Hume&#x27;s view of the relationship between reason and ethics has been widely misunderstood</p>
+<p class="choice">E. contend that Hume&#x27;s view of the relationship between reason and ethics is more complicated than is often suggested</p>
+<p class="qstem">2. The author quotes Hume in the first sentence of the passage primarily to</p>
+<p class="choice">A. illustrate the claim that Hume&#x27;s view of reason&#x27;s role in ethics has been misconstrued</p>
+<p class="choice">B. acknowledge a remark made by Hume that seems to indicate that Hume saw reason as inextricable from ethics</p>
+<p class="choice">C. demonstrate that Hume&#x27;s writings are sometimes ambiguous with respect to the relationship between reason and ethics</p>
+<p class="choice">D. show why someone might see Hume as unsympathetic to the notion that reason plays a role in ethics</p>
+<p class="choice">E. provide evidence that supports the author&#x27;s interpretation of Hume&#x27;s ethical philosophy</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-825">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">RCCR 825</div>
+        </div>
+        <div class="ttl">
+          <h3>Robert Philip · 녹음 음악</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2024 1H, 2025.03-07</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Robert Philip argues that the advent of recorded music has directed performance style into a search for greater precision and perfection, with a consequent loss of spontaneity and warmth. Various expressive <b>devices</b> once common in classical music have been almost outlawed, including portamento (sliding from one note to another on a stringed instrument), playing the piano with the hands not quite synchronized, and flexibility of tempo. Philip fully documents these changes. However, other forces independent of recording were also at work. For example, the freedom of tempo so valued by Philip was, in its time, both a necessary expedient and disastrously abused. Recording alone did not cause the reaction against it, although hearing a particularly unintelligent use of it on disc may have reinforced the prejudice.</p>
+<p class="qstem">1. The author would most likely agree with which of the following statements about the “devices”? </p>
+<p class="choice">A. Increases in the technical proficiency of performers have made their use superfluous. </p>
+<p class="choice">B. They are not useful tools for musical expressivity. </p>
+<p class="choice">C. The advent of recorded music had little or no effect on their popularity. </p>
+<p class="choice">D. Their use cannot usually be detected in a recording, even when they were used in the recorded performance. </p>
+<p class="choice">E. At least some of them have been used inappropriately in the past.</p>
+<p class="qstem">2. A criticism of Philip implied by the passage is that he </p>
+<p class="choice">A. exaggerates the extent of a change in performance style </p>
+<p class="choice">B. attributes a change in performance style to a single cause </p>
+<p class="choice">C. ignores unintelligent uses of certain performance techniques </p>
+<p class="choice">D. values performance techniques that have lost their effectiveness </p>
+<p class="choice">E. limits his discussion of performance style to classical music</p>
+      </div>
+    </div>
+    
+    <div class="problem rccr" id="rccr-859">
+      <div class="head">
+        <div class="badge">
+          <div class="lbl">TIER 2</div>
+          <div class="n">RCCR 859</div>
+        </div>
+        <div class="ttl">
+          <h3>Mayan ↔ Khmer 문명 비교</h3>
+          <div class="meta">출제 <span class="freq">2회</span> · 2024.08.31, 2025.08</div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Similarities in art and architecture once led some scholars to claim that Mayan culture in Central America was partly derived from the Southeast Asian Khmer culture. While Khmer temple-pyramids such as Baksei Chamkrong are strikingly similar to their Mayan counterparts, closer scrutiny of the dating of these structures makes any such theory of transpacific diffusion implausible. Temple-pyramids of the characteristic stepped form and huge cities were being built in Mayan lowlands as early as 200 B.C, a time when most of Southeast Asia had nothing more complex than simple circular villages of pile dwellings. <b>By A.D. 802, when the actions of the Khmer King, Jayavarman Il, initiated the Classic Khmer period, Classic Mayan civilization was already in steep decline, and within the following century it collapsed completely</b>.</p>
+<p class="qstem">1. Which of the following best describes the function of the highlighted sentence?</p>
+<p class="choice"><b>A. </b>It provides evidence against the Classic Mayan civilization&#x27;s influencing the Classic Khmer civilization.</p>
+<p class="choice"><b>B. </b>It provides evidence against the Classic Khmer civilization&#x27;s influencing the Classic Mayan civilization.</p>
+<p class="choice"><b>C. </b>It provides evidence of the Classic Khmer civilization&#x27;s being in steep decline by the end of King Jayavarman Il&#x27;s reign.</p>
+<p class="choice"><b>D. </b>It provides evidence that transpacific travel was impossible during the Classic Khmer period.</p>
+<p class="choice"><b>E. </b>It provides evidence of the similarities between the Classic Mayan and Classic Khmer cultures.</p>
+<p class="instruction"><b>Consider each of the choices separately and select all that apply.</b></p>
+<p class="qstem">2. Which of the following statements about Baksei Chamkrong can be inferred from the passage?</p>
+<p class="choice"><b>A. </b>It is surrounded by pile dwellings.</p>
+<p class="choice"><b>B. </b>It is a stepped temple-pyramid.</p>
+<p class="choice"><b>C. </b>It postdates A D. 800.</p>
+      </div>
+    </div>
+    </section>
+
+<section class="section" id="answers">
+  <div style="text-align: center; margin-bottom: 16px;">
+    <div style="color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .15em;">APPENDIX</div>
+    <h2 style="font-size: 36px; margin: 4px 0;">정답</h2>
+    <p style="color: var(--gray); font-style: italic; font-size: 14px;">Answer Key · 30 Items</p>
+  </div>
+  <div class="rule"></div>
+  <p style="font-style: italic; color: var(--gray); font-size: 13.5px; text-align: center;">해설은 별도 제공 없음. 의문 발생 시 모모집의 원본 해설 참조.</p>
+
+  <h3 style="color: var(--navy); font-size: 17px; margin-top: 22px; margin-bottom: 4px;">Tier 1 정답 (10문제)</h3>
+  <div class="rule" style="margin-top: 4px;"></div>
+  <table class="answers"><thead><tr><th>번호</th><th>정답</th></tr></thead><tbody><tr class="t1"><td class="num">TCSE 146</td><td>abstracted from, divorced from</td></tr><tr class="t1"><td class="num">TCSE 1228</td><td>anticipate, prefigure</td></tr><tr class="t1"><td class="num">TCSE 1299</td><td>irrelevant , compelling , tainted</td></tr><tr class="t1"><td class="num">TCSE 1943</td><td>tested, an anomaly, recalcitrant</td></tr><tr class="t1"><td class="num">RCCR 332</td><td>C, B, B, E</td></tr><tr class="t1"><td class="num">RCCR 700</td><td>D, B, C, E</td></tr><tr class="t1"><td class="num">RCCR 745</td><td>C, A, D</td></tr><tr class="t1"><td class="num">RCCR 789</td><td>B, C, A</td></tr><tr class="t1"><td class="num">RCCR 855</td><td>BC, &quot;Such a strategy, however, implies a cool detachment of the artist from his creation, when in fact Melville is never more personally involved or more in earnest than he is in Pierre.&quot;</td></tr><tr class="t1"><td class="num">RCCR 858</td><td>A, C, A</td></tr></tbody></table>
+
+  <h3 style="color: var(--navy); font-size: 17px; margin-top: 26px; margin-bottom: 4px;">Tier 2 정답 (20문제)</h3>
+  <div class="rule" style="margin-top: 4px;"></div>
+  <table class="answers"><thead><tr><th>번호</th><th>정답</th></tr></thead><tbody><tr class="t2"><td class="num">TCSE 125</td><td>quixotic, dearth, so widely diffused</td></tr><tr class="t2"><td class="num">TCSE 163</td><td>pressing, critical</td></tr><tr class="t2"><td class="num">TCSE 171</td><td>expert&#x27;s, predictable</td></tr><tr class="t2"><td class="num">TCSE 868</td><td>numinous</td></tr><tr class="t2"><td class="num">TCSE 936</td><td>dearth, omission, fundamental</td></tr><tr class="t2"><td class="num">TCSE 1006</td><td>paradigmatic</td></tr><tr class="t2"><td class="num">TCSE 1179</td><td>pleasure, baffled, strike a good balance</td></tr><tr class="t2"><td class="num">TCSE 1471</td><td>upheaval, convulsion</td></tr><tr class="t2"><td class="num">TCSE 1624</td><td>advantage , naiveté</td></tr><tr class="t2"><td class="num">TCSE 2129</td><td>anomalous</td></tr><tr class="t2"><td class="num">TCSE 2151</td><td>a deleterious, a pernicious</td></tr><tr class="t2"><td class="num">TCSE 2493</td><td>palliate, allay</td></tr><tr class="t2"><td class="num">TCSE 2494</td><td>ideologues, zealots</td></tr><tr class="t2"><td class="num">RCCR 42</td><td>E, AB</td></tr><tr class="t2"><td class="num">RCCR 187</td><td>D, A, C</td></tr><tr class="t2"><td class="num">RCCR 678</td><td>D</td></tr><tr class="t2"><td class="num">RCCR 726</td><td>A, C, A, E</td></tr><tr class="t2"><td class="num">RCCR 727</td><td>E, D</td></tr><tr class="t2"><td class="num">RCCR 825</td><td>E, B</td></tr><tr class="t2"><td class="num">RCCR 859</td><td>B, BC</td></tr></tbody></table>
+</section>
+
+<div class="foot">
+  <div class="quote">같은 문제를 세 번 만나라 — 회독으로, 풀이로, 단답 회상으로.</div>
+  <div class="credit">송종옥 GRE Verbal · 2026.05</div>
+</div>
+</div>
+</body>
+</html>
