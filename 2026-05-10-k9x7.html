@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GRE Verbal 최빈출 30 · 송종옥 GRE Verbal</title>
+<title>GRE Verbal 최빈출 30 · 정답 바로보기 · 송종옥 GRE Verbal</title>
 <style>
 :root {
   --navy: #1F3A5F;
@@ -140,6 +140,43 @@ table.answers td.num { color: var(--navy); font-weight: 700; width: 22%; }
 .foot .quote { font-style: italic; margin-bottom: 6px; }
 .foot .credit { color: var(--navy); font-weight: 700; font-size: 14px; }
 
+/* Inline answer box - 정답 바로보기 */
+.ans-inline {
+  margin: 16px 0 0;
+  background: #FFF8E5;
+  border: 1px solid #E6CF7A;
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.ans-inline .lbl {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: .18em;
+  font-weight: 800;
+  flex: 0 0 auto;
+}
+.ans-inline .val {
+  color: var(--navy);
+  font-size: 15.5px;
+  font-weight: 800;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
+  flex: 1 1 auto;
+}
+.ans-inline .val .sentence {
+  display: block;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--gray);
+  margin-top: 6px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 @media (max-width: 720px) {
   .container { padding: 16px 12px 48px; }
   .cover { padding: 32px 20px 28px; }
@@ -162,120 +199,15 @@ table.answers td.num { color: var(--navy); font-weight: 700; width: 22%; }
 </style>
 </head>
 <body>
-
-<!-- ============================================
-     비밀번호 게이트 (수정은 아래 PASSWORD 변수만)
-     ============================================ -->
-<style>
-#pw-gate {
-  position: fixed; inset: 0; z-index: 9999;
-  background: #FAFAF7;
-  display: flex; align-items: center; justify-content: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "Noto Sans KR", sans-serif;
-}
-#pw-gate .pw-card {
-  background: white; border: 1px solid #DDDDDD; border-radius: 16px;
-  padding: 48px 40px; max-width: 420px; width: 90%;
-  box-shadow: 0 4px 18px rgba(0,0,0,.05);
-  text-align: center;
-}
-#pw-gate .pw-label {
-  color: #B8860B; font-weight: 700; letter-spacing: .12em;
-  font-size: 12px; margin-bottom: 12px;
-}
-#pw-gate h1 {
-  color: #1F3A5F; font-size: 24px; margin: 0 0 8px;
-  font-weight: 800; letter-spacing: -.01em;
-}
-#pw-gate .pw-sub {
-  color: #4A4A4A; font-size: 14px; margin-bottom: 28px;
-}
-#pw-gate input[type="password"] {
-  width: 100%; padding: 14px 16px; font-size: 16px;
-  border: 1.5px solid #DDDDDD; border-radius: 10px;
-  background: #FAFAF7; color: #222222;
-  outline: none; transition: border-color .15s;
-  font-family: inherit;
-}
-#pw-gate input[type="password"]:focus { border-color: #1F3A5F; }
-#pw-gate button {
-  margin-top: 14px; width: 100%; padding: 14px;
-  background: #1F3A5F; color: white; border: none; border-radius: 10px;
-  font-size: 15px; font-weight: 700; cursor: pointer;
-  transition: opacity .15s; font-family: inherit;
-}
-#pw-gate button:hover { opacity: .9; }
-#pw-gate .pw-error {
-  color: #B8860B; font-size: 13px; margin-top: 12px; min-height: 18px;
-  font-weight: 600;
-}
-body.pw-locked { overflow: hidden; }
-body.pw-locked > .container,
-body.pw-locked > section { display: none !important; }
-</style>
-
-<div id="pw-gate">
-  <div class="pw-card">
-    <div class="pw-label">SONG GRE VERBAL</div>
-    <h1>수강생 전용 자료</h1>
-    <p class="pw-sub">비밀번호를 입력해 주세요.</p>
-    <input type="password" id="pw-input" autocomplete="off" autofocus>
-    <button id="pw-submit">확인</button>
-    <div class="pw-error" id="pw-error"></div>
-  </div>
-</div>
-
-<script>
-(function() {
-  // ⬇⬇⬇ 비밀번호는 여기서만 수정하세요 ⬇⬇⬇
-  const PASSWORD = "registersong";
-  // ⬆⬆⬆ 비밀번호는 여기서만 수정하세요 ⬆⬆⬆
-
-  const STORAGE_KEY = "gre_freq30_2026_auth";
-  const gate = document.getElementById("pw-gate");
-  const input = document.getElementById("pw-input");
-  const submit = document.getElementById("pw-submit");
-  const errorEl = document.getElementById("pw-error");
-
-  // 이미 인증된 세션이면 게이트 통과
-  if (sessionStorage.getItem(STORAGE_KEY) === "ok") {
-    gate.remove();
-    document.body.classList.remove("pw-locked");
-    return;
-  }
-  document.body.classList.add("pw-locked");
-
-  function tryUnlock() {
-    if (input.value === PASSWORD) {
-      sessionStorage.setItem(STORAGE_KEY, "ok");
-      gate.remove();
-      document.body.classList.remove("pw-locked");
-    } else {
-      errorEl.textContent = "비밀번호가 올바르지 않습니다.";
-      input.value = "";
-      input.focus();
-    }
-  }
-
-  submit.addEventListener("click", tryUnlock);
-  input.addEventListener("keydown", function(e) {
-    if (e.key === "Enter") tryUnlock();
-  });
-})();
-</script>
-<!-- ============================================
-     비밀번호 게이트 끝
-     ============================================ -->
-
 <div class="container">
 
 <section class="cover">
-  <div class="label">GRE VERBAL · 최빈출 풀세트 · 2026</div>
+  <div class="label">GRE VERBAL · 최빈출 풀세트 · 정답 바로보기 · 2026</div>
   <h1>필수 암기 30</h1>
-  <div class="sub">— TCSE 17 + RCCR 13 —</div>
+  <div class="sub">— TCSE 17 + RCCR 13 · 즉시 회상 회독용 —</div>
   <div class="divider"></div>
   <div class="desc">후기 13개 회차 (2023.09–2026.03) 반복 출제 검증</div>
-  <div class="desc-en">Two-Tier Priority Set for Last-Mile Memorization</div>
+  <div class="desc-en">Answer-Embedded Edition · Built for Rapid-Recall Drills</div>
   <div class="stats">
     <div class="stat t1"><div class="lbl">TIER 1</div><div class="num">10</div><div class="sub">D-1 회독 우선</div></div>
     <div class="stat t2"><div class="lbl">TIER 2</div><div class="num">20</div><div class="sub">D-7 ~ D-2 회독</div></div>
@@ -290,7 +222,7 @@ body.pw-locked > section { display: none !important; }
   <h2>들어가는 글</h2>
   <div class="rule"></div>
   <p class="intro-quote">"시험 일주일 전, 무엇을 봐야 합니까?"</p>
-  <p>이 자료는 후기 13개 회차(2023.09–2026.03)에서 2회 이상 반복 출제된 17개 TCSE 번호 + 13개 RCCR 지문, 총 30문제를 모은 필수 암기 풀세트다. 각 문제는 모모집 본문·보기 그대로 가져왔으며, 정답은 마지막 부록 페이지에 별도로 정리되어 있다.</p>
+  <p>이 자료는 후기 13개 회차(2023.09–2026.03)에서 2회 이상 반복 출제된 17개 TCSE 번호 + 13개 RCCR 지문, 총 30문제를 모은 필수 암기 풀세트다. 각 문제는 모모집 본문·보기 그대로 가져왔으며, <b>본 버전은 각 문제 바로 아래에 정답을 함께 표시한 「정답 바로보기 판」</b>이다. 즉시 정답 회상·암기 회독에 최적화되어 있다. (정답 미표시 원본은 같은 폴더의 <i>GRE_Verbal_frequent30_2026.html</i> 참조)</p>
   <p>두 단계로 나누어 시험 직전 회독 효율을 높였다.</p>
 
   <div class="tier-box t1">
@@ -345,9 +277,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">For certain economists, &quot;pure” economic theory, that is, economic theory __________ a specific social structure, is impossible, much like a concept of anatomy that investigates no specific species.</p>
         <ul class="opts-se"><li>attuned to</li><li>abstracted from</li><li>derived from</li><li>divorced from</li><li>sensitive to</li><li>analyzed in</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">abstracted from · divorced from</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-1228">
       <div class="head">
         <div class="badge">
@@ -362,9 +295,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Even if the story now seems a surprisingly innocuous overture to the author&#x27;s later, more fully developed narrations, it __________ some of the key traits of those bleaker tales.</p>
         <ul class="opts-se"><li>avoids</li><li>belies</li><li>undercuts</li><li>anticipates</li><li>possesses</li><li>prefigures</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">anticipates · prefigures</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-1299">
       <div class="head">
         <div class="badge">
@@ -379,9 +313,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Some climatologists dismiss as (i)__________ the debate among geophysicists over the role of carbon dioxide in global climate change across many millions of years. These climatologists say the evidence of a tie between carbon dioxide and planetary warming over the last few centuries is so (ii)__________ that any longer-term evidence against such a link must somehow be (iii)__________.</p>
         <table class="opts-multi"><thead><tr><th>Blank (i)</th><th>Blank (ii)</th><th>Blank (iii)</th></tr></thead><tbody><tr><td>unavoidable</td><td>unlikely</td><td>tainted</td></tr><tr><td>irrelevant</td><td>controversial</td><td>accommodated</td></tr><tr><td>undecided</td><td>compelling</td><td>reinforced</td></tr></tbody></table>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">(i) irrelevant &nbsp;·&nbsp; (ii) compelling &nbsp;·&nbsp; (iii) tainted</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-1943">
       <div class="head">
         <div class="badge">
@@ -396,6 +331,7 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">It is inevitable that ongoing research presupposes some accepted science as a principle. Usually no one even notices the implication that the accepted principle is being (i)____________ unless there emerges (ii)____________ that turns out to be sufficiently (iii)____________ that the assumptions underlying the research come to be considered.</p>
         <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th><th>Blank(iii)</th></tr></thead><tbody><tr><td>jeopardized</td><td>an anomaly</td><td>trivial</td></tr><tr><td>revised</td><td>a consensus</td><td>transparent</td></tr><tr><td>tested</td><td>a distinction</td><td>recalcitrant</td></tr></tbody></table>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">(i) tested &nbsp;·&nbsp; (ii) an anomaly &nbsp;·&nbsp; (iii) recalcitrant</div></div>
       </div>
     </div>
     </section>
@@ -437,9 +373,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice"><b>C.</b> owed its emergence in the late 1930s and its subsequent spread primarily to the earlier craft unions&#x27; failure to organize Women and minority workers</p>
 <p class="choice"><b>D.</b> has been firmly committed to forcing employers to abandon exclusionary or discriminatory hiring policies</p>
 <p class="choice"><b>E.</b> tended to open union membership to workers who would probably not have been recruitable by unions adopting the earlier craft-union model</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. C &nbsp;·&nbsp; 2. B &nbsp;·&nbsp; 3. B &nbsp;·&nbsp; 4. E</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-700">
       <div class="head">
         <div class="badge">
@@ -478,9 +415,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. Women workers wages are generally less affected by centralized collective bargaining than are men&#x27;s wages. </p>
 <p class="choice">D. Women workers wages are sometimes adversely affected by wage setting practices that are intended to remedy overall wage inequality. </p>
 <p class="choice">E. Women workers&#x27; wages are generally closer to the wages of similarly qualified male workers where wages are set through centralized wage bargaining than where they are set through decentralized wage bargaining.</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. D &nbsp;·&nbsp; 2. B &nbsp;·&nbsp; 3. C &nbsp;·&nbsp; 4. E</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-745">
       <div class="head">
         <div class="badge">
@@ -512,9 +450,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. reflects the popularity of large oil paintings of African American families during this period</p>
 <p class="choice">D. includes few miniature portraits of influential African American men</p>
 <p class="choice">E. suggests that African Americans&#x27; portraits were generally painted by African American artists</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. C &nbsp;·&nbsp; 2. A &nbsp;·&nbsp; 3. D</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-789">
       <div class="head">
         <div class="badge">
@@ -546,9 +485,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. They helped protect people in the Maya Lowlands from prolonged droughts.</p>
 <p class="choice">D. They allowed the Maya to store excess water for times of need.</p>
 <p class="choice">E. They were an important Mayan social innovation.</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. B &nbsp;·&nbsp; 2. C &nbsp;·&nbsp; 3. A</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-855">
       <div class="head">
         <div class="badge">
@@ -568,9 +508,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">B. Melville&#x27;s use of an extravagant writing style </p>
 <p class="choice">C. Melville&#x27;s exaggerated depiction of bourgeois society Select one answer choice.</p>
 <p>2.Select the sentence that presents a reason for questioning twentieth-century readings of Pierre. </p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. B, C &nbsp;·&nbsp; 2. 마지막 문장<div class="sentence">"Such a strategy, however, implies a cool detachment of the artist from his creation, when in fact Melville is never more personally involved or more in earnest than he is in Pierre."</div></div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-858">
       <div class="head">
         <div class="badge">
@@ -603,6 +544,7 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. What sort of diet any humans at Pikimachay might have had</p>
 <p class="choice">D. How many people the Pikimachay area could have supported</p>
 <p class="choice">E. How many sloths existed in the Pikimachay area</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. A &nbsp;·&nbsp; 2. C &nbsp;·&nbsp; 3. A</div></div>
       </div>
     </div>
     </section>
@@ -634,9 +576,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">His idea to make money by building a drone that could fly from the West Coast to Hawaii while continuously sending back low-altitude weather data is a characteristically (i)__________ project. The (ii)__________ of good storm-intensity forecasts has huge economic costs, but filling that need won&#x27;t automatically generate big profits because the economic benefits are (iii)__________.</p>
         <table class="opts-multi"><thead><tr><th>Blank (i)</th><th>Blank (ii)</th><th>Blank (iii)</th></tr></thead><tbody><tr><td>quixotic</td><td>ubiquity</td><td>almost inevitable</td></tr><tr><td>mercenary</td><td>accuracy</td><td>hard to envision</td></tr><tr><td>resourceful</td><td>dearth</td><td>so widely diffused</td></tr></tbody></table>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">(i) quixotic &nbsp;·&nbsp; (ii) dearth &nbsp;·&nbsp; (iii) so widely diffused</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-163">
       <div class="head">
         <div class="badge">
@@ -651,9 +594,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">If big sums are to be spent on cleaning up environment tragedies, it is better to spend them on monotonous but __________ problems like unsanitary water in third world countries.</p>
         <ul class="opts-se"><li>futile</li><li>ephemeral</li><li>pressing</li><li>controversial</li><li>transitory</li><li>critical</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">pressing · critical</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-171">
       <div class="head">
         <div class="badge">
@@ -668,9 +612,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Though dealers insist that professional art dealers can make money in the art market, even an (i)__________ knowledge is not enough: the art world is so fickle that stock-market prices are (ii)__________ by comparison.</p>
         <table class="opts-multi"><thead><tr><th>Blank (i)</th><th>Blank (ii)</th></tr></thead><tbody><tr><td>amateur’s</td><td>erratic</td></tr><tr><td>artist’s</td><td>booming</td></tr><tr><td>expert’s</td><td>predictable</td></tr></tbody></table>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">(i) expert's &nbsp;·&nbsp; (ii) predictable</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-868">
       <div class="head">
         <div class="badge">
@@ -685,9 +630,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">My grandma has a strong belief in all things ________: she insists, for example, that the house in which she lived as a child was haunted.</p>
         <ul class="opts-single"><li>clamorous</li><li>invidious</li><li>numinous</li><li>empirical</li><li>sonorous</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">numinous</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-936">
       <div class="head">
         <div class="badge">
@@ -702,9 +648,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">The (i)__________ of dissociative disorder sections in commonly used general psychiatric screening instruments has led to the (ii)__________ of dissociative disorders in large-scale epidemiological studies for many decades. Although studies using specific instruments have begun to correct this lack, the inclusion of testing for dissociative disorders in future general psychiatric screening studies is (iii)__________ for prevention of false negative diagnosis in future research, will facilitate better differential diagnosis between dissociative and other psychiatric disorders, and will also help to gather detailed information.</p>
         <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th><th>Blank(iii)</th></tr></thead><tbody><tr><td>dearth</td><td>acquittal</td><td>debatable</td></tr><tr><td>abundance</td><td>justification</td><td>fundamental</td></tr><tr><td>confounding</td><td>omission</td><td>incongruous</td></tr></tbody></table>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">(i) dearth &nbsp;·&nbsp; (ii) omission &nbsp;·&nbsp; (iii) fundamental</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-1006">
       <div class="head">
         <div class="badge">
@@ -719,9 +666,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">In the nineteenth century, geology became so respected among middle-class Britons that the science came to be seen as a(n) __________ yardstick by which other disciplines measured their scientific rigor and imaginative power.</p>
         <ul class="opts-single"><li>accessible</li><li>derivative</li><li>pragmatic</li><li>empirical</li><li>paradigmatic</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">paradigmatic</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-1179">
       <div class="head">
         <div class="badge">
@@ -736,9 +684,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Anthony Kenny states that although his A New History of Western Philosophy is intended for undergraduates, he aimed to write it in a lighthearted manner that will give (i)__________ to those who read the history “not for curricular purposes but for their own enjoyment”. His book is certainly enlightening, and although the bibliography includes technical works liable to (ii)__________ the newcomer, the work is written at a level that generally (iii)__________ between elementary and advanced.</p>
         <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th><th>Blank (iii)</th></tr></thead><tbody><tr><td>solace</td><td>baffle</td><td>strike a good balance</td></tr><tr><td>pleasure</td><td>initiate</td><td>makes fine distinctions</td></tr><tr><td>offense</td><td>suit</td><td>rejects the difference</td></tr></tbody></table>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">(i) pleasure &nbsp;·&nbsp; (ii) baffle &nbsp;·&nbsp; (iii) strike a good balance</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-1471">
       <div class="head">
         <div class="badge">
@@ -753,9 +702,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Three of the nation&#x27;s largest airlines could be operating under bankruptcy protection in coming weeks, analysts say, the latest sign of the industry&#x27;s __________ as it lurches through a historic transformation.</p>
         <ul class="opts-se"><li>upheaval</li><li>exorbitance</li><li>affluence</li><li>peril</li><li>convulsion</li><li>opulence</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">upheaval · convulsion</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-1624">
       <div class="head">
         <div class="badge">
@@ -770,9 +720,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Although it is not uncommon for journalists to portray political inexperience on the part of public officials as an (i)__________, it was nevertheless surprising when members of the press treated the new senator’s obvious (ii)__________ as an extraordinary virtue.</p>
         <table class="opts-multi"><thead><tr><th>Blank(i)</th><th>Blank(ii)</th></tr></thead><tbody><tr><td>advantage</td><td>nonchalance</td></tr><tr><td>impediment</td><td>acumen</td></tr><tr><td>exception</td><td>naiveté</td></tr></tbody></table>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">(i) advantage &nbsp;·&nbsp; (ii) naiveté</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-2129">
       <div class="head">
         <div class="badge">
@@ -787,9 +738,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Many people think of the city as so extreme in its cultural fusion that it is ___________, but this study advances the opposite claim, that the city is actually representative of the nation as a whole.</p>
         <ul class="opts-single"><li>protean</li><li>discordant</li><li>anomalous</li><li>ungovernable</li><li>adulterated</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">anomalous</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-2151">
       <div class="head">
         <div class="badge">
@@ -804,9 +756,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">The safety features of modern cars have actually had ___________ effect on people&#x27;s driving: drivers are lulled into a false sense of security by their cars’ sophistication and therefore drive less attentively.</p>
         <ul class="opts-se"><li>an unintended</li><li>an unaccountable</li><li>an inconsequential</li><li>a deleterious</li><li>a negligible</li><li>a pernicious</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">a deleterious · a pernicious</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-2493">
       <div class="head">
         <div class="badge">
@@ -821,9 +774,10 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">Toni Morrison’s 1998 novel was originally called War, but her publisher was concerned abou the title’s effects on efforts to market the book; in order to ___________ those apprehensions, Morrison changed the title to Paradise.</p>
         <ul class="opts-se"><li>avert</li><li>palliate</li><li>vindicate</li><li>uphold</li><li>allay</li><li>examine</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">palliate · allay</div></div>
       </div>
     </div>
-    
+
     <div class="problem tcse" id="tcse-2494">
       <div class="head">
         <div class="badge">
@@ -838,6 +792,7 @@ body.pw-locked > section { display: none !important; }
       <div class="body">
         <p class="question">In one commentator&#x27;s view, modern free traders are complete __________ because they show no interest in practicality, nuance, or flexibility on the issue of free trade.</p>
         <ul class="opts-se"><li>ideologues</li><li>cynics</li><li>zealots</li><li>simpletons</li><li>hypocrites</li><li>phonies</li></ul>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">ideologues · zealots</div></div>
       </div>
     </div>
     </section>
@@ -866,9 +821,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">A. It conferred an authority typically enjoyed only by men.</p>
 <p class="choice">B. It prevented formation of alliances with other women.</p>
 <p class="choice">C. It relieved peer pressure to conform to traditional values.</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. E &nbsp;·&nbsp; 2. A, B</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-187">
       <div class="head">
         <div class="badge">
@@ -900,9 +856,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. It did not necessarily provide a high standard of living for most Norwegians </p>
 <p class="choice">D. It produced a Norwegian industrialization that differed qualitatively from industrialization in other European countries in that the labor movement was less radical in Norway </p>
 <p class="choice">E. It was more pervasive in southern than in northern Norway</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. D &nbsp;·&nbsp; 2. A &nbsp;·&nbsp; 3. C</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-678">
       <div class="head">
         <div class="badge">
@@ -922,9 +879,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. Harpacticoids are more susceptible to poisoning by heavy metals than are other marine organisms.</p>
 <p class="choice">D. The microorganisms that harpacticoids feed on are not killed by pollutants that are harmless to harpacticoids.</p>
 <p class="choice">E. The microorganisms that harpacticoids feed on absorb heavy metals.</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">D</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-726">
       <div class="head">
         <div class="badge">
@@ -964,9 +922,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. point out a useful distinction</p>
 <p class="choice">D. outline disputing positions</p>
 <p class="choice">E. challenge a prevailing attitude</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. A &nbsp;·&nbsp; 2. C &nbsp;·&nbsp; 3. A &nbsp;·&nbsp; 4. E</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-727">
       <div class="head">
         <div class="badge">
@@ -992,9 +951,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. demonstrate that Hume&#x27;s writings are sometimes ambiguous with respect to the relationship between reason and ethics</p>
 <p class="choice">D. show why someone might see Hume as unsympathetic to the notion that reason plays a role in ethics</p>
 <p class="choice">E. provide evidence that supports the author&#x27;s interpretation of Hume&#x27;s ethical philosophy</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. E &nbsp;·&nbsp; 2. D</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-825">
       <div class="head">
         <div class="badge">
@@ -1020,9 +980,10 @@ body.pw-locked > section { display: none !important; }
 <p class="choice">C. ignores unintelligent uses of certain performance techniques </p>
 <p class="choice">D. values performance techniques that have lost their effectiveness </p>
 <p class="choice">E. limits his discussion of performance style to classical music</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. E &nbsp;·&nbsp; 2. B</div></div>
       </div>
     </div>
-    
+
     <div class="problem rccr" id="rccr-859">
       <div class="head">
         <div class="badge">
@@ -1047,6 +1008,7 @@ body.pw-locked > section { display: none !important; }
 <p class="choice"><b>A. </b>It is surrounded by pile dwellings.</p>
 <p class="choice"><b>B. </b>It is a stepped temple-pyramid.</p>
 <p class="choice"><b>C. </b>It postdates A D. 800.</p>
+        <div class="ans-inline"><div class="lbl">정답</div><div class="val">1. B &nbsp;·&nbsp; 2. B, C</div></div>
       </div>
     </div>
     </section>
@@ -1054,11 +1016,11 @@ body.pw-locked > section { display: none !important; }
 <section class="section" id="answers">
   <div style="text-align: center; margin-bottom: 16px;">
     <div style="color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .15em;">APPENDIX</div>
-    <h2 style="font-size: 36px; margin: 4px 0;">정답</h2>
-    <p style="color: var(--gray); font-style: italic; font-size: 14px;">Answer Key · 30 Items</p>
+    <h2 style="font-size: 36px; margin: 4px 0;">정답 한눈에 보기</h2>
+    <p style="color: var(--gray); font-style: italic; font-size: 14px;">Answer Key Recap · 30 Items at a Glance</p>
   </div>
   <div class="rule"></div>
-  <p style="font-style: italic; color: var(--gray); font-size: 13.5px; text-align: center;">해설은 별도 제공 없음. 의문 발생 시 모모집의 원본 해설 참조.</p>
+  <p style="font-style: italic; color: var(--gray); font-size: 13.5px; text-align: center;">각 문제 본문 아래에도 동일한 정답이 표시되어 있다. 본 부록은 막판 한 페이지 점검용.</p>
 
   <h3 style="color: var(--navy); font-size: 17px; margin-top: 22px; margin-bottom: 4px;">Tier 1 정답 (10문제)</h3>
   <div class="rule" style="margin-top: 4px;"></div>
@@ -1071,7 +1033,7 @@ body.pw-locked > section { display: none !important; }
 
 <div class="foot">
   <div class="quote">같은 문제를 세 번 만나라 — 회독으로, 풀이로, 단답 회상으로.</div>
-  <div class="credit">송종옥 GRE Verbal · 2026.05</div>
+  <div class="credit">송종옥 GRE Verbal · 2026.05 · 정답 바로보기 판</div>
 </div>
 </div>
 </body>
