@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRE Verbal 빈출 어휘 47 · 송종옥 GRE Verbal</title>
+<style>
+:root {
+  --navy: #1F3A5F; --gold: #B8860B; --warn: #B05A2D;
+  --bg: #FAFAF7; --soft-blue: #E8EEF5; --soft-cream: #F4F1EA;
+  --soft-warn: #FBE9DD;
+  --text: #222; --gray: #4A4A4A; --border: #DDD;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.55; font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "Noto Sans KR", sans-serif; }
+.container { max-width: 900px; margin: 0 auto; padding: 36px 28px 60px; }
+
+/* Cover */
+.cover { background: white; border-radius: 16px; padding: 56px 44px 44px; text-align: center; margin-bottom: 26px; border: 1px solid var(--border); box-shadow: 0 4px 18px rgba(0,0,0,.05); }
+.cover .label { color: var(--gold); font-weight: 700; letter-spacing: .12em; font-size: 12px; margin-bottom: 10px; }
+.cover h1 { color: var(--navy); font-size: 46px; margin: 0 0 6px; font-weight: 800; }
+.cover .sub { color: var(--navy); font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+.cover .divider { width: 100%; height: 2px; background: var(--gold); opacity: .5; margin: 20px auto; }
+.cover .desc { color: var(--gray); font-size: 14px; }
+.cover .desc-en { color: var(--gray); font-style: italic; font-size: 12.5px; margin-bottom: 22px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 22px 0 18px; }
+.stat { border-radius: 10px; padding: 18px 8px; }
+.stat.dark { background: var(--navy); color: white; }
+.stat.light { background: var(--soft-cream); }
+.stat .num { font-size: 26px; font-weight: 800; line-height: 1; }
+.stat.light .num { color: var(--navy); }
+.stat.dark .num { color: white; }
+.stat .lbl { font-size: 10px; margin-top: 5px; }
+.stat.light .lbl { color: var(--gray); }
+.stat.dark .lbl { color: #CCC; }
+.cover .author { color: var(--navy); font-weight: 700; font-size: 14px; margin-top: 22px; }
+.cover .date { color: var(--gray); font-size: 12px; }
+
+/* Section */
+.section { background: white; border-radius: 14px; padding: 30px 32px; margin-bottom: 22px; border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+.section h2 { color: var(--navy); font-size: 24px; margin: 0 0 4px; font-weight: 800; }
+.section .rule { height: 2px; background: var(--gold); opacity: .35; margin: 8px 0 16px; }
+.intro-quote { font-size: 16px; font-style: italic; color: var(--navy); font-weight: 700; margin: 2px 0 12px; }
+
+.legend { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0 20px; }
+.legend-item { border-radius: 8px; padding: 12px 14px; text-align: center; }
+.legend-item.core { background: var(--soft-cream); }
+.legend-item.recent { background: var(--soft-blue); }
+.legend-item.warn { background: var(--soft-warn); }
+.legend-item .marker { font-size: 18px; font-weight: 700; }
+.legend-item.core .marker { color: var(--gold); }
+.legend-item.recent .marker { color: var(--navy); }
+.legend-item.warn .marker { color: var(--warn); }
+.legend-item .name { color: var(--navy); font-weight: 700; font-size: 14px; margin-left: 6px; }
+.legend-item .desc { color: var(--gray); font-size: 11.5px; margin-top: 4px; }
+
+table.index { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+table.index th { background: var(--navy); color: white; padding: 8px 12px; text-align: left; font-weight: 700; font-size: 13px; }
+table.index th.center, table.index td.center { text-align: center; }
+table.index td { padding: 5px 12px; border-bottom: 1px solid var(--border); }
+table.index tr:nth-child(odd) td { background: var(--soft-cream); }
+table.index tr:nth-child(even) td { background: #F8F8F6; }
+table.index td.gid { color: var(--gold); font-weight: 700; width: 7%; }
+table.index td.name { color: var(--navy); font-weight: 700; width: 42%; }
+table.index td.preview { color: var(--gray); font-style: italic; }
+
+/* Group card */
+.group { background: white; border-radius: 12px; margin-bottom: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.03); }
+.group .head { background: var(--navy); color: white; padding: 12px 22px; }
+.group .head .gid { color: var(--gold); font-weight: 800; font-size: 18px; margin-right: 8px; }
+.group .head .name { font-size: 17px; font-weight: 800; }
+.group .head .desc { color: #BCC; font-style: italic; font-size: 12px; margin-top: 3px; }
+.group .pair { padding: 12px 22px; border-bottom: 1px solid #EEE; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
+.group .pair:last-child { border-bottom: none; }
+.group .pair .en { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif; }
+.group .pair .en .word { color: var(--navy); font-size: 16px; font-weight: 700; }
+.group .pair .en .tier-mark { font-size: 11px; margin-left: 3px; font-weight: 700; }
+.group .pair .en .tier-mark.core { color: var(--gold); }
+.group .pair .en .tier-mark.recent { color: var(--navy); }
+.group .pair .en .tier-mark.distractor { color: var(--warn); }
+.group .pair .en .se { color: var(--gold); font-weight: 700; margin: 0 12px; }
+.group .pair .en .cluster-sep { color: var(--gray); margin: 0 6px; }
+.group .pair .en .label { color: var(--gray); font-style: italic; font-size: 11.5px; margin-top: 2px; display: block; }
+.group .pair .ko { color: var(--text); font-size: 14px; }
+.group .pair .ko .sep { color: var(--gold); font-weight: 700; margin: 0 6px; }
+
+/* Alphabet index */
+.az-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; margin-top: 14px; }
+.az-grid table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.az-grid th { background: var(--navy); color: white; padding: 6px 10px; text-align: left; font-weight: 700; font-size: 12px; }
+.az-grid td { padding: 5px 10px; border-bottom: 1px solid var(--border); }
+.az-grid tr:nth-child(odd) td { background: var(--soft-cream); }
+.az-grid td.w { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif; color: var(--navy); font-weight: 700; width: 50%; }
+.az-grid td.w .tm { font-size: 10px; margin-left: 3px; }
+.az-grid td.k { color: var(--text); }
+.az-grid td.k .g { color: var(--gold); font-weight: 700; margin-left: 4px; }
+
+.foot { text-align: center; margin-top: 22px; padding: 18px 0; color: var(--gray); }
+.foot .quote { font-style: italic; margin-bottom: 6px; font-size: 14px; }
+.foot .credit { color: var(--navy); font-weight: 700; font-size: 13px; }
+
+@media (max-width: 720px) {
+  .container { padding: 14px 10px 40px; }
+  .cover { padding: 28px 18px; }
+  .cover h1 { font-size: 32px; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .legend { grid-template-columns: 1fr; }
+  .group .pair { grid-template-columns: 1fr; gap: 4px; }
+  .az-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  body { background: white; font-size: 11pt; }
+  .container { max-width: 100%; padding: 0; }
+  .cover, .section, .group { box-shadow: none; border: 1px solid #DDD; page-break-inside: avoid; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     비밀번호 게이트 (수정은 아래 PASSWORD 변수만)
+     ============================================ -->
+<style>
+#pw-gate {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #FAFAF7;
+  display: flex; align-items: center; justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "Noto Sans KR", sans-serif;
+}
+#pw-gate .pw-card {
+  background: white; border: 1px solid #DDDDDD; border-radius: 16px;
+  padding: 48px 40px; max-width: 420px; width: 90%;
+  box-shadow: 0 4px 18px rgba(0,0,0,.05);
+  text-align: center;
+}
+#pw-gate .pw-label {
+  color: #B8860B; font-weight: 700; letter-spacing: .12em;
+  font-size: 12px; margin-bottom: 12px;
+}
+#pw-gate h1 {
+  color: #1F3A5F; font-size: 24px; margin: 0 0 8px;
+  font-weight: 800; letter-spacing: -.01em;
+}
+#pw-gate .pw-sub {
+  color: #4A4A4A; font-size: 14px; margin-bottom: 28px;
+}
+#pw-gate input[type="password"] {
+  width: 100%; padding: 14px 16px; font-size: 16px;
+  border: 1.5px solid #DDDDDD; border-radius: 10px;
+  background: #FAFAF7; color: #222222;
+  outline: none; transition: border-color .15s;
+  font-family: inherit;
+}
+#pw-gate input[type="password"]:focus { border-color: #1F3A5F; }
+#pw-gate button {
+  margin-top: 14px; width: 100%; padding: 14px;
+  background: #1F3A5F; color: white; border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  transition: opacity .15s; font-family: inherit;
+}
+#pw-gate button:hover { opacity: .9; }
+#pw-gate .pw-error {
+  color: #B8860B; font-size: 13px; margin-top: 12px; min-height: 18px;
+  font-weight: 600;
+}
+body.pw-locked { overflow: hidden; }
+body.pw-locked > .container,
+body.pw-locked > section { display: none !important; }
+</style>
+
+<div id="pw-gate">
+  <div class="pw-card">
+    <div class="pw-label">SONG GRE VERBAL</div>
+    <h1>수강생 전용 자료</h1>
+    <p class="pw-sub">비밀번호를 입력해 주세요.</p>
+    <input type="password" id="pw-input" autocomplete="off" autofocus>
+    <button id="pw-submit">확인</button>
+    <div class="pw-error" id="pw-error"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ⬇⬇⬇ 비밀번호는 여기서만 수정하세요 ⬇⬇⬇
+  const PASSWORD = "songisbest";
+  // ⬆⬆⬆ 비밀번호는 여기서만 수정하세요 ⬆⬆⬆
+
+  const STORAGE_KEY = "gre_vocab47_2026_auth";
+  const gate = document.getElementById("pw-gate");
+  const input = document.getElementById("pw-input");
+  const submit = document.getElementById("pw-submit");
+  const errorEl = document.getElementById("pw-error");
+
+  // 이미 인증된 세션이면 게이트 통과
+  if (sessionStorage.getItem(STORAGE_KEY) === "ok") {
+    gate.remove();
+    document.body.classList.remove("pw-locked");
+    return;
+  }
+  document.body.classList.add("pw-locked");
+
+  function tryUnlock() {
+    if (input.value === PASSWORD) {
+      sessionStorage.setItem(STORAGE_KEY, "ok");
+      gate.remove();
+      document.body.classList.remove("pw-locked");
+    } else {
+      errorEl.textContent = "비밀번호가 올바르지 않습니다.";
+      input.value = "";
+      input.focus();
+    }
+  }
+
+  submit.addEventListener("click", tryUnlock);
+  input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") tryUnlock();
+  });
+})();
+</script>
+<!-- ============================================
+     비밀번호 게이트 끝
+     ============================================ -->
+
+<div class="container">
+
+<section class="cover">
+  <div class="label">GRE VERBAL · 기본반 어휘 · 2026</div>
+  <h1>빈출 어휘 47</h1>
+  <div class="sub">— SE 짝꿓으로 묶은 15 의미 그룹 —</div>
+  <div class="divider"></div>
+  <div class="desc">13개 회차 후기 (2023.09–2026.03) 반복 출제 검증</div>
+  <div class="desc-en">Vocabulary Pairs Organized by Semantic Cluster</div>
+  <div class="stats">
+    <div class="stat dark"><div class="num">15</div><div class="lbl">의미 그룹</div></div>
+    <div class="stat light"><div class="num">47</div><div class="lbl">단어 (총)</div></div>
+    <div class="stat light"><div class="num">★ 26</div><div class="lbl">Core 반복</div></div>
+    <div class="stat light"><div class="num">◆ 14</div><div class="lbl">Recent 신규</div></div>
+  </div>
+  <div class="author">송종옥 GRE Verbal</div>
+  <div class="date">2026.05</div>
+</section>
+
+
+<section class="section" id="intro">
+  <h2>들어가는 글</h2>
+  <div class="rule"></div>
+  <p class="intro-quote">"단어 외울 때, 한 개씩 외우지 마세요. 짝꿓으로 외우세요."</p>
+  <p>GRE Sentence Equivalence(SE) 문제는 본질적으로 "같은 뜻을 가진 두 단어"를 고르는 문제다. 단어를 단독으로 외우면 시험에서 두 번 일을 해야 한다 — 뜻을 떠올린 후 다시 비슷한 단어를 매칭해야 하기 때문이다. 처음부터 짝꿓 단위로 외우면 SE 문제에서 정답이 한 번에 보인다.</p>
+  <p>이 자료는 13개 회차 후기에서 반복 등장한 47개 빈출 단어를 15개 의미 그룹으로 묶은 것이다. 각 그룹 안에서 SE 짝꿓이 즉시 보이도록 정렬했고, 신규 단어와 오답 클러스터는 별도 표시했다.</p>
+
+  <h3 style="color: var(--navy); font-size: 16px; margin-top: 16px; margin-bottom: 0;">Tier 범례</h3>
+  <div class="legend">
+    <div class="legend-item core"><span class="marker">★</span><span class="name">Core</span><div class="desc">3회 이상 반복</div></div>
+    <div class="legend-item recent"><span class="marker">◆</span><span class="name">Recent</span><div class="desc">2025–26 신규</div></div>
+    <div class="legend-item warn"><span class="marker">※</span><span class="name">오답 / 주의</span><div class="desc">오답 클러스터</div></div>
+  </div>
+
+  <h3 style="color: var(--navy); font-size: 16px; margin-top: 16px; margin-bottom: 6px;">15 의미 그룹 한눈에 보기</h3>
+  <table class="index">
+    <thead><tr><th class="center" style="width:8%;">#</th><th style="width:42%;">의미</th><th>단어 미리보기</th></tr></thead>
+    <tbody><tr><td class="gid center">A</td><td class="name">예고하다 · 미리 보여주다</td><td class="preview">anticipate, prefigure, prescient … +1</td></tr><tr><td class="gid center">B</td><td class="name">분리·독립된 / 추상화된</td><td class="preview">abstracted from, divorced from</td></tr><tr><td class="gid center">C</td><td class="name">격변 · 격동</td><td class="preview">upheaval, convulsion</td></tr><tr><td class="gid center">D</td><td class="name">부유함 · 풍요 (오답 클러스터)</td><td class="preview">opulence, exorbitance, affluence</td></tr><tr><td class="gid center">E</td><td class="name">시급한 · 절박한</td><td class="preview">pressing, critical</td></tr><tr><td class="gid center">F</td><td class="name">무관한 · 오염된 vs. 강력한 (Triple TC)</td><td class="preview">irrelevant, tainted, compelling … +1</td></tr><tr><td class="gid center">G</td><td class="name">변칙적 · 특이한</td><td class="preview">atypical, idiosyncratic, anomalous … +1</td></tr><tr><td class="gid center">H</td><td class="name">비현실적 · 환상적</td><td class="preview">quixotic, idealistic</td></tr><tr><td class="gid center">I</td><td class="name">부족 · 결여</td><td class="preview">dearth, modicum, omission … +2</td></tr><tr><td class="gid center">J</td><td class="name">해롭다 · 유해함</td><td class="preview">deleterious, pernicious</td></tr><tr><td class="gid center">K</td><td class="name">누그러뜨리다 · 진정시키다</td><td class="preview">allay, palliate</td></tr><tr><td class="gid center">L</td><td class="name">광신자 · 이념가</td><td class="preview">ideologue, zealot</td></tr><tr><td class="gid center">M</td><td class="name">즐거움 · 위안</td><td class="preview">pleasure, solace</td></tr><tr><td class="gid center">N</td><td class="name">변화무쌍 · 다양함</td><td class="preview">protean, mutable, discordant</td></tr><tr><td class="gid center">O</td><td class="name">항의·반대 · 이중성 (2026 신규)</td><td class="preview">remonstrate, protest, duplicity … +5</td></tr></tbody>
+  </table>
+</section>
+
+<section class="section"><h2>의미별 어휘 그룹</h2><div class="rule"></div><p style="font-style: italic; color: var(--gray); font-size: 13.5px;">각 그룹은 의미 클러스터다. ≈ 기호로 연결된 단어는 SE 짝꿓.</p>
+    <div class="group" id="group-A">
+      <div class="head">
+        <span class="gid">A.</span><span class="name">예고하다 · 미리 보여주다</span>
+        <div class="desc">어떤 것이 나중의 사건이나 작품을 미리 시사·예고하는 의미</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">anticipate</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">prefigure</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">미리 예견하다, 선구적으로 보여주다<span class="sep">/</span>미리 나타내다, 예시하다</div></div><div class="pair"><div class="en"><span class="word">prescient</span><span class="tier-mark recent">◆</span><span class="se">≈</span><span class="word">foresighted</span><span class="tier-mark recent">◆</span><span class="label">[recent]</span></div><div class="ko">예지력 있는<span class="sep">/</span>선견지명이 있는</div></div>
+    </div>
+    
+
+    <div class="group" id="group-B">
+      <div class="head">
+        <span class="gid">B.</span><span class="name">분리·독립된 / 추상화된</span>
+        <div class="desc">어떤 사회·맥락으로부터 추상화되거나 떨어져 있다는 의미</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">abstracted from</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">divorced from</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">~으로부터 추상화·분리된<span class="sep">/</span>~으로부터 단절된</div></div>
+    </div>
+    
+
+    <div class="group" id="group-C">
+      <div class="head">
+        <span class="gid">C.</span><span class="name">격변 · 격동</span>
+        <div class="desc">산업·정치 등에서 격렬한 변동·혼란</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">upheaval</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">convulsion</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">대격변<span class="sep">/</span>격동, 동란</div></div>
+    </div>
+    
+
+    <div class="group" id="group-D">
+      <div class="head">
+        <span class="gid">D.</span><span class="name">부유함 · 풍요 (오답 클러스터)</span>
+        <div class="desc">TCSE 1471 오답군 — 의미를 잘못 골라 빠지기 쉬워 주의</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">opulence</span><span class="tier-mark distractor">※</span><span class="cluster-sep">·</span><span class="word">exorbitance</span><span class="tier-mark distractor">※</span><span class="cluster-sep">·</span><span class="word">affluence</span><span class="tier-mark distractor">※</span><span class="label">[distractor]</span></div><div class="ko">풍족, 호화<span class="sep">/</span>과도함, 터무니없음<span class="sep">/</span>부유함</div></div>
+    </div>
+    
+
+    <div class="group" id="group-E">
+      <div class="head">
+        <span class="gid">E.</span><span class="name">시급한 · 절박한</span>
+        <div class="desc">환경·사회 문제 등 즉시 해결이 필요한</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">pressing</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">critical</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">시급한, 긴급한<span class="sep">/</span>결정적인, 시급한</div></div>
+    </div>
+    
+
+    <div class="group" id="group-F">
+      <div class="head">
+        <span class="gid">F.</span><span class="name">무관한 · 오염된 vs. 강력한 (Triple TC)</span>
+        <div class="desc">기후 논쟁의 무관성/타당성 — Triple TC 문제</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">irrelevant</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">tainted</span><span class="tier-mark core">★</span><span class="label">[blank i]</span></div><div class="ko">무관한 (i)<span class="sep">/</span>오염된, 손상된 (i)</div></div><div class="pair"><div class="en"><span class="word">compelling</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">reinforced</span><span class="tier-mark core">★</span><span class="label">[blank ii]</span></div><div class="ko">강력한, 설득력 있는 (ii)<span class="sep">/</span>강화된 (ii)</div></div>
+    </div>
+    
+
+    <div class="group" id="group-G">
+      <div class="head">
+        <span class="gid">G.</span><span class="name">변칙적 · 특이한</span>
+        <div class="desc">예측 불가능한 변동성 — 산불 모델링 문제 등</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">atypical</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">idiosyncratic</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">비전형적인<span class="sep">/</span>특유한, 변칙적</div></div><div class="pair"><div class="en"><span class="word">anomalous</span><span class="tier-mark recent">◆</span><span class="se">≈</span><span class="word">erratic</span><span class="tier-mark recent">◆</span><span class="label">[recent]</span></div><div class="ko">변칙적인<span class="sep">/</span>불규칙한</div></div>
+    </div>
+    
+
+    <div class="group" id="group-H">
+      <div class="head">
+        <span class="gid">H.</span><span class="name">비현실적 · 환상적</span>
+        <div class="desc">실현 가능성 없는 이상주의적인 계획</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">quixotic</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">idealistic</span><span class="tier-mark recent">◆</span><span class="label">[core/recent]</span></div><div class="ko">비현실적, 돈키호테 같은<span class="sep">/</span>이상주의적인</div></div>
+    </div>
+    
+
+    <div class="group" id="group-I">
+      <div class="head">
+        <span class="gid">I.</span><span class="name">부족 · 결여</span>
+        <div class="desc">&quot;양&quot;의 부족을 묻는 패턴이 매년 등장 — 반대말 (glut, surfeit) 도 함께</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">dearth</span><span class="tier-mark core">★</span><span class="cluster-sep">·</span><span class="word">modicum</span><span class="tier-mark distractor">※</span><span class="cluster-sep">·</span><span class="word">omission</span><span class="tier-mark core">★</span><span class="label">[부족]</span></div><div class="ko">부족, 결여<span class="sep">/</span>소량<span class="sep">/</span>누락</div></div><div class="pair"><div class="en"><span class="word">glut</span><span class="tier-mark distractor">※</span><span class="se">≈</span><span class="word">surfeit</span><span class="tier-mark distractor">※</span><span class="label">[과잉 (반의어)]</span></div><div class="ko">과잉 (반의어)<span class="sep">/</span>과잉 (반의어)</div></div>
+    </div>
+    
+
+    <div class="group" id="group-J">
+      <div class="head">
+        <span class="gid">J.</span><span class="name">해롭다 · 유해함</span>
+        <div class="desc">안전 기능의 역설적 부작용 — &quot;해로운&quot;의 강한 라틴어계 동의어</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">deleterious</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">pernicious</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">해로운<span class="sep">/</span>치명적인, 유해한</div></div>
+    </div>
+    
+
+    <div class="group" id="group-K">
+      <div class="head">
+        <span class="gid">K.</span><span class="name">누그러뜨리다 · 진정시키다</span>
+        <div class="desc">걱정·우려를 가라앉히는 동사 페어 (Toni Morrison Paradise 문제)</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">allay</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">palliate</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">진정시키다<span class="sep">/</span>완화하다</div></div>
+    </div>
+    
+
+    <div class="group" id="group-L">
+      <div class="head">
+        <span class="gid">L.</span><span class="name">광신자 · 이념가</span>
+        <div class="desc">실용성 없이 신념만 고집하는 사람을 비판</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">ideologue</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">zealot</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">이념가, 신봉자<span class="sep">/</span>광신자</div></div>
+    </div>
+    
+
+    <div class="group" id="group-M">
+      <div class="head">
+        <span class="gid">M.</span><span class="name">즐거움 · 위안</span>
+        <div class="desc">Anthony Kenny 철학사 책의 문체 묘사</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">pleasure</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">solace</span><span class="tier-mark core">★</span><span class="label">[core]</span></div><div class="ko">즐거움<span class="sep">/</span>위안</div></div>
+    </div>
+    
+
+    <div class="group" id="group-N">
+      <div class="head">
+        <span class="gid">N.</span><span class="name">변화무쌍 · 다양함</span>
+        <div class="desc">도시 정체성에 대한 묘사 (proteus 신화에서 유래)</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">protean</span><span class="tier-mark core">★</span><span class="se">≈</span><span class="word">mutable</span><span class="tier-mark recent">◆</span><span class="label">[core/recent]</span></div><div class="ko">변화무쌍한, 다재다능한<span class="sep">/</span>변할 수 있는</div></div><div class="pair"><div class="en"><span class="word">discordant</span><span class="tier-mark distractor">※</span><span class="label">[반대 뉘앙스]</span></div><div class="ko">불협화의 (반대 뉘앙스)</div></div>
+    </div>
+    
+
+    <div class="group" id="group-O">
+      <div class="head">
+        <span class="gid">O.</span><span class="name">항의·반대 · 이중성 (2026 신규)</span>
+        <div class="desc">2026년 시험 후기에서 처음 등장한 SE pair · TC 빈칸들</div>
+      </div>
+      <div class="pair"><div class="en"><span class="word">remonstrate</span><span class="tier-mark recent">◆</span><span class="se">≈</span><span class="word">protest</span><span class="tier-mark recent">◆</span><span class="label">[recent · 항의]</span></div><div class="ko">항의하다<span class="sep">/</span>항의하다</div></div><div class="pair"><div class="en"><span class="word">duplicity</span><span class="tier-mark recent">◆</span><span class="se">≈</span><span class="word">dissemblance</span><span class="tier-mark recent">◆</span><span class="label">[recent · 이중성]</span></div><div class="ko">이중성, 속임<span class="sep">/</span>위장, 가식</div></div><div class="pair"><div class="en"><span class="word">specious</span><span class="tier-mark recent">◆</span><span class="se">≈</span><span class="word">spurious</span><span class="tier-mark recent">◆</span><span class="label">[recent · 가짜]</span></div><div class="ko">겉으로만 그럴듯한<span class="sep">/</span>가짜의, 허위의</div></div><div class="pair"><div class="en"><span class="word">obfuscate</span><span class="tier-mark recent">◆</span><span class="label">[단독]</span></div><div class="ko">모호하게 하다, 흐리다</div></div><div class="pair"><div class="en"><span class="word">perennial</span><span class="tier-mark recent">◆</span><span class="label">[단독]</span></div><div class="ko">오래 지속되는, 다년생</div></div>
+    </div>
+    </section>
+
+<section class="section" id="alphabet">
+  <h2>알파벳순 회독 인덱스</h2>
+  <div class="rule"></div>
+  <p style="font-style: italic; color: var(--gray); font-size: 13.5px;">47단어 전체 · 그룹 위치(A–O) 표시 · 빠른 단어 찾기 / 회독용</p>
+  <div class="az-grid">
+    <table><thead><tr><th>단어</th><th>뜻 · 그룹</th></tr></thead><tbody><tr><td class="w">abstracted from <span class="tm">★</span></td><td class="k">~으로부터 추상화·분리된<span class="g">[B]</span></td></tr><tr><td class="w">affluence <span class="tm">※</span></td><td class="k">부유함<span class="g">[D]</span></td></tr><tr><td class="w">allay <span class="tm">★</span></td><td class="k">진정시키다<span class="g">[K]</span></td></tr><tr><td class="w">anomalous <span class="tm">◆</span></td><td class="k">변칙적인<span class="g">[G]</span></td></tr><tr><td class="w">anticipate <span class="tm">★</span></td><td class="k">미리 예견하다, 선구적으로 보여주다<span class="g">[A]</span></td></tr><tr><td class="w">atypical <span class="tm">★</span></td><td class="k">비전형적인<span class="g">[G]</span></td></tr><tr><td class="w">compelling <span class="tm">★</span></td><td class="k">강력한, 설득력 있는 (ii)<span class="g">[F]</span></td></tr><tr><td class="w">convulsion <span class="tm">★</span></td><td class="k">격동, 동란<span class="g">[C]</span></td></tr><tr><td class="w">critical <span class="tm">★</span></td><td class="k">결정적인, 시급한<span class="g">[E]</span></td></tr><tr><td class="w">dearth <span class="tm">★</span></td><td class="k">부족, 결여<span class="g">[I]</span></td></tr><tr><td class="w">deleterious <span class="tm">★</span></td><td class="k">해로운<span class="g">[J]</span></td></tr><tr><td class="w">discordant <span class="tm">※</span></td><td class="k">불협화의 (반대 뉘앙스)<span class="g">[N]</span></td></tr><tr><td class="w">dissemblance <span class="tm">◆</span></td><td class="k">위장, 가식<span class="g">[O]</span></td></tr><tr><td class="w">divorced from <span class="tm">★</span></td><td class="k">~으로부터 단절된<span class="g">[B]</span></td></tr><tr><td class="w">duplicity <span class="tm">◆</span></td><td class="k">이중성, 속임<span class="g">[O]</span></td></tr><tr><td class="w">erratic <span class="tm">◆</span></td><td class="k">불규칙한<span class="g">[G]</span></td></tr><tr><td class="w">exorbitance <span class="tm">※</span></td><td class="k">과도함, 터무니없음<span class="g">[D]</span></td></tr><tr><td class="w">foresighted <span class="tm">◆</span></td><td class="k">선견지명이 있는<span class="g">[A]</span></td></tr><tr><td class="w">glut <span class="tm">※</span></td><td class="k">과잉 (반의어)<span class="g">[I]</span></td></tr><tr><td class="w">idealistic <span class="tm">◆</span></td><td class="k">이상주의적인<span class="g">[H]</span></td></tr><tr><td class="w">ideologue <span class="tm">★</span></td><td class="k">이념가, 신봉자<span class="g">[L]</span></td></tr><tr><td class="w">idiosyncratic <span class="tm">★</span></td><td class="k">특유한, 변칙적<span class="g">[G]</span></td></tr><tr><td class="w">irrelevant <span class="tm">★</span></td><td class="k">무관한 (i)<span class="g">[F]</span></td></tr><tr><td class="w">modicum <span class="tm">※</span></td><td class="k">소량<span class="g">[I]</span></td></tr></tbody></table>
+    <table><thead><tr><th>단어</th><th>뜻 · 그룹</th></tr></thead><tbody><tr><td class="w">mutable <span class="tm">◆</span></td><td class="k">변할 수 있는<span class="g">[N]</span></td></tr><tr><td class="w">obfuscate <span class="tm">◆</span></td><td class="k">모호하게 하다, 흐리다<span class="g">[O]</span></td></tr><tr><td class="w">omission <span class="tm">★</span></td><td class="k">누락<span class="g">[I]</span></td></tr><tr><td class="w">opulence <span class="tm">※</span></td><td class="k">풍족, 호화<span class="g">[D]</span></td></tr><tr><td class="w">palliate <span class="tm">★</span></td><td class="k">완화하다<span class="g">[K]</span></td></tr><tr><td class="w">perennial <span class="tm">◆</span></td><td class="k">오래 지속되는, 다년생<span class="g">[O]</span></td></tr><tr><td class="w">pernicious <span class="tm">★</span></td><td class="k">치명적인, 유해한<span class="g">[J]</span></td></tr><tr><td class="w">pleasure <span class="tm">★</span></td><td class="k">즐거움<span class="g">[M]</span></td></tr><tr><td class="w">prefigure <span class="tm">★</span></td><td class="k">미리 나타내다, 예시하다<span class="g">[A]</span></td></tr><tr><td class="w">prescient <span class="tm">◆</span></td><td class="k">예지력 있는<span class="g">[A]</span></td></tr><tr><td class="w">pressing <span class="tm">★</span></td><td class="k">시급한, 긴급한<span class="g">[E]</span></td></tr><tr><td class="w">protean <span class="tm">★</span></td><td class="k">변화무쌍한, 다재다능한<span class="g">[N]</span></td></tr><tr><td class="w">protest <span class="tm">◆</span></td><td class="k">항의하다<span class="g">[O]</span></td></tr><tr><td class="w">quixotic <span class="tm">★</span></td><td class="k">비현실적, 돈키호테 같은<span class="g">[H]</span></td></tr><tr><td class="w">reinforced <span class="tm">★</span></td><td class="k">강화된 (ii)<span class="g">[F]</span></td></tr><tr><td class="w">remonstrate <span class="tm">◆</span></td><td class="k">항의하다<span class="g">[O]</span></td></tr><tr><td class="w">solace <span class="tm">★</span></td><td class="k">위안<span class="g">[M]</span></td></tr><tr><td class="w">specious <span class="tm">◆</span></td><td class="k">겉으로만 그럴듯한<span class="g">[O]</span></td></tr><tr><td class="w">spurious <span class="tm">◆</span></td><td class="k">가짜의, 허위의<span class="g">[O]</span></td></tr><tr><td class="w">surfeit <span class="tm">※</span></td><td class="k">과잉 (반의어)<span class="g">[I]</span></td></tr><tr><td class="w">tainted <span class="tm">★</span></td><td class="k">오염된, 손상된 (i)<span class="g">[F]</span></td></tr><tr><td class="w">upheaval <span class="tm">★</span></td><td class="k">대격변<span class="g">[C]</span></td></tr><tr><td class="w">zealot <span class="tm">★</span></td><td class="k">광신자<span class="g">[L]</span></td></tr></tbody></table>
+  </div>
+</section>
+
+<div class="foot">
+  <div class="quote">단어는 짝꿓으로, 그룹은 의미 단위로. SE 정답이 즉시 보인다.</div>
+  <div class="credit">송종옥 GRE Verbal · 2026.05</div>
+</div>
+</div>
+</body>
+</html>
