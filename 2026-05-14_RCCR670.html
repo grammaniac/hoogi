@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RCCR 670 (변경된 문제)</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --ink: #1f1f1f;
+    --muted: #555;
+    --accent: #b8860b;
+    --notice-bg: #fff8e1;
+    --notice-border: #e0b84a;
+    --highlight: #fff59d;
+    --correct: #2e7d32;
+    --wrong: #c62828;
+    --btn: #1f4e8b;
+    --btn-hover: #163a68;
+    --border: #e5e3dc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", "Segoe UI", "Noto Sans KR", "맑은 고딕", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+    padding: 24px 16px;
+    line-height: 1.65;
+  }
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .notice {
+    background: var(--notice-bg);
+    border-left: 7px solid var(--notice-border);
+    padding: 22px 26px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+    font-size: 19px;
+    color: #4a3a08;
+    line-height: 1.65;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(176, 130, 20, 0.12);
+  }
+  .notice strong {
+    display: block;
+    font-size: 21px;
+    font-weight: 700;
+    color: #8a6a10;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+  h1 {
+    font-size: 26px;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.3px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .passage {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .passage mark.hl {
+    background: var(--highlight);
+    padding: 1px 2px;
+    border-radius: 2px;
+  }
+  .directive {
+    font-style: italic;
+    color: #444;
+    margin: 14px 0 8px 0;
+  }
+  .question {
+    margin-top: 8px;
+  }
+  .qnum {
+    font-weight: 600;
+    margin: 18px 0 10px 0;
+    font-size: 16px;
+  }
+  ol.choices {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ol.choices li {
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  ol.choices li:hover {
+    background: #f3efe4;
+  }
+  ol.choices li.selected {
+    background: #eef4ff;
+    border-color: #aac6f0;
+  }
+  ol.choices.square li::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #555;
+    margin-top: 6px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: #fff;
+  }
+  ol.choices.square li.selected::before {
+    background: #1f4e8b;
+    border-color: #1f4e8b;
+  }
+  ol.choices.table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #bbb;
+  }
+  ol.choices.table li {
+    display: table-row;
+    border-radius: 0;
+  }
+  ol.choices.table li > .letter,
+  ol.choices.table li > .text {
+    display: table-cell;
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    vertical-align: top;
+  }
+  .letter {
+    font-weight: 600;
+    min-width: 22px;
+  }
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  button {
+    background: var(--btn);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.15s;
+  }
+  button:hover { background: var(--btn-hover); }
+  button.secondary {
+    background: #6b6b6b;
+  }
+  button.secondary:hover { background: #4a4a4a; }
+  button:disabled {
+    background: #b0b0b0;
+    cursor: not-allowed;
+  }
+  .answer-box {
+    background: #f4fbf6;
+    border: 1px solid #bfe0c8;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-top: 20px;
+    display: none;
+  }
+  .answer-box.show { display: block; }
+  .answer-box h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: var(--correct);
+  }
+  .answer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #cfe4d4;
+  }
+  .answer-row:last-child { border-bottom: none; }
+  .answer-row .yours { color: var(--muted); font-size: 14px; }
+  .answer-row .yours.correct { color: var(--correct); font-weight: 600; }
+  .answer-row .yours.wrong { color: var(--wrong); font-weight: 600; }
+  .answer-row .correct-letter {
+    background: var(--correct);
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .guidance {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 14px;
+    padding: 10px 12px;
+    background: #fbf7ec;
+    border-radius: 6px;
+  }
+  .score {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="notice">
+    <strong>📢 안내</strong>RCCR 670번 문제 아래와 같이 변경되었습니다. 책에 실려 있는 기존 문제는 더 이상 나오지 않는 형태의 문제이고, 변경된 문제는 최근 3년간 <strong style="display:inline; font-size:inherit; color:#b8410b; font-weight:700;">16회 출제</strong>가 확인된 문제이니 꼭 익히시기 바랍니다.
+  </div>
+
+  <h1>RCCR 670</h1>
+  <div class="subtitle">Reading Comprehension · 변경된 문제</div>
+
+  <div class="card">
+    <p class="passage">
+      Ralph Cohen, in his 1964 critical history of Thomson's <em>The Seasons</em>, argued nearly half a century ago that illustrations are criticism of the works they illustrate. More recently, critics have fruitfully explored illustrations of the works of Defoe and Sterne. In her study of graphic design and the novel, Janine Barchas has explained the function of illustrations as interpretive guides. Barchas mainly discusses frontispieces, but her point applies to other kinds of illustrations. In the case of Tobias Smollett, illustrations not only indicate what illustrators thought of the novels, but may also reveal how those novels were received by readers. The number and diversity of the images are especially valuable because, as Fred W. Boege long ago demonstrated, we know relatively little about how eighteenth-century readers conceived of Smollett as a novelist. <mark class="hl">Our understanding of Smollett's reception has improved since Boege's time, but some difficulties in knowing what readers thought of Smollett remain, because recorded responses are scanty.</mark> Roderick Random, for instance, did not receive any reviews, since it was published before reviewing contemporary fiction became widespread. And reviews of the other novels consist mainly of large excerpts from the work itself with a few general remarks on how well the characters are conceived. Nor do the few responses we have provide a consistent picture of how Smollett was read. The illustrations, therefore, give us alternative perspectives that can only enrich our understanding of Smollett's reception.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="question" data-qid="1">
+      <div class="qnum">1. Which of the following can be inferred from the passage about <em>Roderick Random</em>?</div>
+      <ol class="choices table">
+        <li data-letter="A"><span class="letter">A.</span><span class="text">Its characters were not considered to be as memorable as those featured in Smollett's later novels.</span></li>
+        <li data-letter="B"><span class="letter">B.</span><span class="text">Its reputation was more controversial than that of Smollett's later novels.</span></li>
+        <li data-letter="C"><span class="letter">C.</span><span class="text">It was published during a period when it was uncommon for critics to review contemporary novels.</span></li>
+        <li data-letter="D"><span class="letter">D.</span><span class="text">It was published during a period when critics devoted most of their attention to poetry.</span></li>
+        <li data-letter="E"><span class="letter">E.</span><span class="text">It would probably have received less critical attention had it been published a few decades later.</span></li>
+      </ol>
+    </div>
+
+    <div class="question" data-qid="2">
+      <p class="directive">For the following question, consider each of the choices separately and select all that apply.</p>
+      <div class="qnum">2. Which of the following, if it were found, would provide evidence to help address the highlighted problem?</div>
+      <ol class="choices square">
+        <li data-letter="A"><span class="text">An eighteenth-century portrait of Smollett as a young man</span></li>
+        <li data-letter="B"><span class="text">An early draft of <em>Roderick Random</em> with Smollett's revisions</span></li>
+        <li data-letter="C"><span class="text">An eighteenth-century letter that explains the letter writer's aversion to Smollett's novels</span></li>
+      </ol>
+    </div>
+
+    <div class="question" data-qid="3">
+      <div class="qnum">3. The passage suggests that eighteenth-century reviewers of Smollett's novels were likely to</div>
+      <ol class="choices table">
+        <li data-letter="A"><span class="letter">A.</span><span class="text">quote long stretches from the books they reviewed</span></li>
+        <li data-letter="B"><span class="letter">B.</span><span class="text">identify with characters in the books they reviewed</span></li>
+        <li data-letter="C"><span class="letter">C.</span><span class="text">privilege style over plot when evaluating novels</span></li>
+        <li data-letter="D"><span class="letter">D.</span><span class="text">compare the books they reviewed to the literature of earlier periods</span></li>
+        <li data-letter="E"><span class="letter">E.</span><span class="text">pay close attention to illustrations in the books they reviewed</span></li>
+      </ol>
+    </div>
+
+    <div class="guidance">
+      각 문제의 보기를 클릭해 답을 선택하세요. 2번 문제는 해당하는 보기를 모두 고르세요(복수 선택 가능). 세 문제 모두 선택을 마친 뒤 <strong>"정답 확인"</strong> 버튼을 누르면 정답이 공개됩니다.
+    </div>
+
+    <div class="controls">
+      <button id="revealBtn" disabled>정답 확인</button>
+      <button id="resetBtn" class="secondary">다시 풀기</button>
+    </div>
+
+    <div class="answer-box" id="answerBox">
+      <h2>정답</h2>
+      <div class="answer-row">
+        <span>1번</span>
+        <span class="correct-letter">C</span>
+        <span class="yours" id="yours-1">내 답: —</span>
+      </div>
+      <div class="answer-row">
+        <span>2번 (복수 선택)</span>
+        <span class="correct-letter">C</span>
+        <span class="yours" id="yours-2">내 답: —</span>
+      </div>
+      <div class="answer-row">
+        <span>3번</span>
+        <span class="correct-letter">A</span>
+        <span class="yours" id="yours-3">내 답: —</span>
+      </div>
+      <div class="score" id="score"></div>
+    </div>
+  </div>
+
+  <footer>GRE Verbal · 2026-05-14</footer>
+</div>
+
+<script>
+  const correct = { "1": ["C"], "2": ["C"], "3": ["A"] };
+  const multi = { "1": false, "2": true, "3": false };
+  const selections = { "1": [], "2": [], "3": [] };
+
+  document.querySelectorAll(".question").forEach(q => {
+    const qid = q.dataset.qid;
+    q.querySelectorAll("ol.choices li").forEach(li => {
+      li.addEventListener("click", () => {
+        const letter = li.dataset.letter;
+        if (multi[qid]) {
+          if (li.classList.contains("selected")) {
+            li.classList.remove("selected");
+            selections[qid] = selections[qid].filter(x => x !== letter);
+          } else {
+            li.classList.add("selected");
+            selections[qid].push(letter);
+          }
+        } else {
+          q.querySelectorAll("ol.choices li").forEach(x => x.classList.remove("selected"));
+          li.classList.add("selected");
+          selections[qid] = [letter];
+        }
+        updateRevealButton();
+      });
+    });
+  });
+
+  function updateRevealButton() {
+    const ready =
+      selections["1"].length > 0 &&
+      selections["2"].length > 0 &&
+      selections["3"].length > 0;
+    document.getElementById("revealBtn").disabled = !ready;
+  }
+
+  function setYours(qid) {
+    const el = document.getElementById("yours-" + qid);
+    const sel = [...selections[qid]].sort().join(", ") || "—";
+    const corr = [...correct[qid]].sort().join(", ");
+    const isCorrect = sel === corr;
+    el.textContent = "내 답: " + sel;
+    el.classList.remove("correct", "wrong");
+    el.classList.add(isCorrect ? "correct" : "wrong");
+    return isCorrect;
+  }
+
+  document.getElementById("revealBtn").addEventListener("click", () => {
+    const box = document.getElementById("answerBox");
+    box.classList.add("show");
+    let n = 0;
+    if (setYours("1")) n++;
+    if (setYours("2")) n++;
+    if (setYours("3")) n++;
+    document.getElementById("score").textContent = "맞은 갯수: " + n + " / 3";
+    box.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    document.querySelectorAll("ol.choices li.selected").forEach(li => li.classList.remove("selected"));
+    selections["1"] = []; selections["2"] = []; selections["3"] = [];
+    document.getElementById("answerBox").classList.remove("show");
+    document.getElementById("revealBtn").disabled = true;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>
